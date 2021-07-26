@@ -1,8 +1,9 @@
+import Footer from '@/components/Footer';
 import Head from 'next/head';
 import Navbar from '@/components/Navbar';
+import { MoonIcon, SunIcon } from '@heroicons/react/solid';
 import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
-import { MoonIcon, SunIcon } from '@heroicons/react/solid';
 
 /**
  *
@@ -24,6 +25,10 @@ function Container({ children, title }) {
         <title>{title || 'Luke Shay'}</title>
       </Head>
       <Navbar>
+        <div>
+          <Navbar.Link href="/">Home</Navbar.Link>
+          <Navbar.Link href="/resume">Resume</Navbar.Link>
+        </div>
         <button
           aria-label="Toggle Dark Mode"
           type="button"
@@ -37,14 +42,24 @@ function Container({ children, title }) {
               <MoonIcon className="w-4 h-4 text-gray-800" />
             ))}
         </button>
-        <div>
-          <Navbar.Link href="/">Home</Navbar.Link>
-          <Navbar.Link href="/resume">Resume</Navbar.Link>
-        </div>
       </Navbar>
       <main id="skip" className="flex flex-col justify-center px-8 bg-white dark:bg-black">
         {children}
       </main>
+      <Footer>
+        {/* <Footer.Group>
+          <Footer.Link href="/">Home</Footer.Link>
+          <Footer.Link href="/">About</Footer.Link>
+          <Footer.Link href="/">Resume</Footer.Link>
+        </Footer.Group>
+        <Footer.Group>
+          <Footer.ExternalLink href="https://github.com/lukeshay">GitHub</Footer.ExternalLink>
+          <Footer.ExternalLink href="https://linkedin.com/in/luke-shay">
+            Linkedin
+          </Footer.ExternalLink>
+          <Footer.ExternalLink href="	https://medium.com/@lukeshay">Medium</Footer.ExternalLink>
+        </Footer.Group> */}
+      </Footer>
     </div>
   );
 }

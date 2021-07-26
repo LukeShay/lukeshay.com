@@ -1,7 +1,6 @@
 import NextLink from 'next/link';
 
 /**
- *
  * @param {Object} props
  * @param {string} props.href
  * @param {React.ReactNode} props.children

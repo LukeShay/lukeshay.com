@@ -28,7 +28,7 @@ const nextConfig = {
 // https://securityheaders.com
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' *.github.com;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com;
   child-src *.github.com;
   style-src 'self' 'unsafe-inline' *.googleapis.com;
   img-src * blob: data:;
