@@ -1,5 +1,9 @@
 {
   "private": true,
+  "engines": {
+    "yarn": "^2.4.2",
+    "node": "^14.15"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
