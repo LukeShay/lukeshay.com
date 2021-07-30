@@ -1,9 +1,9 @@
 <script>
-  let clazz;
+  let clazz = '';
 
   export let href;
-  export let target;
-  export let rel;
+  export let target = '';
+  export let rel = '';
   export { clazz as class };
 </script>
 

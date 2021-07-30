@@ -1,5 +1,29 @@
+<script context="module">
+  /**
+   * @type {import('@sveltejs/kit').Load}
+   */
+  export async function load({ fetch }) {
+    const res = await fetch('/api/gh/pinned');
+
+    if (res.ok) {
+      return {
+        props: {
+          repos: await res.json(),
+        },
+      };
+    }
+
+    return {
+      props: {},
+    };
+  }
+</script>
+
 <script>
+  import PinnedRepo from '../components/PinnedRepo.svelte';
   import Container from '../components/containers/Container.svelte';
+
+  export let repos;
 </script>
 
 <Container>
@@ -12,5 +36,15 @@
       Programmer on the Web Services team. I am currently working on rewriting this website so most
       pages are incomplete.
     </h2>
+    {#if repos}
+      <h3 class="mb-4 text-2xl font-bold tracking-tight text-black md:text-4xl dark:text-white">
+        Pinned Github Repositories
+      </h3>
+      <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 my-2 w-full">
+        {#each repos as repo}
+          <PinnedRepo {repo} />
+        {/each}
+      </div>
+    {/if}
   </div>
 </Container>
