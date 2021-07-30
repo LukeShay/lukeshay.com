@@ -1,4 +1,4 @@
-node_modules/
-.next/
-.vercel/
-.yarn/
+.svelte-kit/**
+static/**
+build/**
+node_modules/**

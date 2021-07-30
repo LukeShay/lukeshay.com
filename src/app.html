@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="preload"
+      href="/fonts/inter-var-latin.woff2"
+      as="font"
+      type="font/woff2"
+      cross-origin="anonymous"
+    />
+    <link rel="icon" href="/favicons/favicon.ico" />
+    <meta content="#ffffff" name="theme-color" />
+    <meta content="#ffffff" name="msapplication-TileColor" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=${analyticsId}" />
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-45NHHK5CPW', {
+        page_path: window.location.pathname + window.location.search || '',
+      });
+    </script>
+    <title>Luke Shay</title>
+    %svelte.head%
+  </head>
+
+  <body class="text-white bg-white dark:bg-black dark:text-black">
+    <div id="svelte" class="bg-white dark:bg-black">%svelte.body%</div>
+  </body>
+</html>
