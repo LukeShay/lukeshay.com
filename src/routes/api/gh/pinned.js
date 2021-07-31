@@ -22,7 +22,7 @@ export async function get() {
       `,
       {
         headers: {
-          Authorization: `token ${process.env.GITHUB_API_TOKEN}`,
+          Authorization: `token ${import.meta.env.VITE_GITHUB_API_TOKEN}`,
         },
       },
     );
