@@ -4,7 +4,6 @@ import { graphql } from '@octokit/graphql';
  * @type {import('@sveltejs/kit').RequestHandler}
  */
 export async function get() {
-  console.log('api token:', import.meta.env.VITE_GITHUB_API_TOKEN);
   try {
     const pinnedRepos = await graphql(
       `
