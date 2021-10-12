@@ -17,7 +17,7 @@
   const applyTheme = () => {
     const preferredTheme = prefersDarkThemes() ? THEMES.DARK : THEMES.LIGHT;
 
-    currentTheme = localStorage.getItem(STORAGE_KEY) ?? preferredTheme;
+    currentTheme = localStorage.getItem(STORAGE_KEY) || preferredTheme;
 
     if (currentTheme === THEMES.DARK) {
       document.body.classList.remove(THEMES.LIGHT);

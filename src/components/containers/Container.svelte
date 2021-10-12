@@ -15,7 +15,7 @@
 <Navbar>
   <div>
     <Link href="/">Home</Link>
-    <Link href="/resume">Resume</Link>
+    <Link href="/resume-2021-10.pdf" target="_blank" rel="noopener noreferrer">Resume</Link>
   </div>
   <ThemeToggle />
 </Navbar>
