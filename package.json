@@ -9,8 +9,11 @@
     "format": "prettier --write --plugin-search-dir=. ."
   },
   "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/eslint-parser": "^7.15.8",
     "@sveltejs/adapter-vercel": "next",
     "@sveltejs/kit": "next",
+    "@tailwindcss/aspect-ratio": "^0.3.0",
     "@tailwindcss/typography": "^0.4.1",
     "autoprefixer": "^10.3.7",
     "cssnano": "^5.0.8",

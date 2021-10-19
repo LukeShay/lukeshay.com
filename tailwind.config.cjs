@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       colors: {
         'blue-opaque': 'rgb(13 42 148 / 18%)',
+        ...require('tailwindcss/colors'),
       },
       fontFamily: {
         sans: ['Inter', ...fontFamily.sans],
@@ -77,5 +78,5 @@ module.exports = {
   variants: {
     typography: ['dark'],
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/aspect-ratio')],
 };

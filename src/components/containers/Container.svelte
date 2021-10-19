@@ -2,7 +2,6 @@
   import Navbar from '../navbar/Navbar.svelte';
   import Link from '../navbar/Link.svelte';
   import Footer from '../footer/Footer.svelte';
-  import Moon from '../icons/solid/Moon.svelte';
   import ThemeToggle from '../ThemeToggle.svelte';
 
   export let title = 'Luke Shay';
@@ -13,7 +12,7 @@
 </svelte:head>
 
 <Navbar>
-  <div>
+  <div class="space-x-2">
     <Link href="/">Home</Link>
     <Link href="/resume-2021-10.pdf" target="_blank" rel="noopener noreferrer">Resume</Link>
   </div>

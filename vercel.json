@@ -22,6 +22,11 @@
       "source": "/github",
       "destination": "https://github.com/lukeshay",
       "permanent": true
+    },
+    {
+      "source": "/linkedin",
+      "destination": "https://www.linkedin.com/in/luke-shay/",
+      "permanent": true
     }
   ]
 }

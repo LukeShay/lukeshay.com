@@ -7,4 +7,11 @@
   export { clazz as class };
 </script>
 
-<a {href} {target} {rel} class="{clazz} p-1 text-gray-900 sm:p-4 dark:text-gray-100"><slot /></a>
+<a
+  {href}
+  {target}
+  {rel}
+  class="{clazz} text-gray-900 p-2 dark:text-gray-100 hover:ring ring-teal-400 rounded transition ease-in-out duration-300"
+>
+  <slot />
+</a>
