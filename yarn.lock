@@ -327,9 +327,9 @@
     esbuild "^0.13.4"
 
 "@sveltejs/kit@next":
-  version "1.0.0-next.186"
-  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-1.0.0-next.186.tgz#e184ec2daeb78c96d55d9b4514eecf45a002a3b0"
-  integrity sha512-LFv2q2cToreUcGp0B+5uVfu0qMvQiw3hsyELnUwxPP/lpUbcmYjgQmwivjRNTdudCqZt7ng3Ehy7UDILbBhExQ==
+  version "1.0.0-next.188"
+  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-1.0.0-next.188.tgz#815ff05d17717f82e25963d1fd5a7bcc7f9f103f"
+  integrity sha512-eDssOlwcAmkUR3SGh3PK4LHBfV3mMY9vhsMohMUPV7oJO3fydOgvDykqzxK9wc1NgNB/TIBCm+1sps2vetePHw==
   dependencies:
     "@sveltejs/vite-plugin-svelte" "^1.0.0-next.30"
     cheap-watch "^1.0.4"
