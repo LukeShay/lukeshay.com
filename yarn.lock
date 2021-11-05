@@ -327,14 +327,14 @@
     esbuild "^0.13.4"
 
 "@sveltejs/kit@next":
-  version "1.0.0-next.186"
-  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-1.0.0-next.186.tgz#e184ec2daeb78c96d55d9b4514eecf45a002a3b0"
-  integrity sha512-LFv2q2cToreUcGp0B+5uVfu0qMvQiw3hsyELnUwxPP/lpUbcmYjgQmwivjRNTdudCqZt7ng3Ehy7UDILbBhExQ==
+  version "1.0.0-next.194"
+  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-1.0.0-next.194.tgz#dc4ee7e9402598085fda570bb3a762689c2cc7bf"
+  integrity sha512-xM6BKLZkfYUEy0JXwglhCqBF58S8K4Lt7K7TdLMirrO4gtnZlhg8yhMsG+dYM257Fq0ucS7d/72QgXJfnfURZA==
   dependencies:
     "@sveltejs/vite-plugin-svelte" "^1.0.0-next.30"
     cheap-watch "^1.0.4"
     sade "^1.7.4"
-    vite "^2.6.10"
+    vite "^2.6.12"
 
 "@sveltejs/vite-plugin-svelte@^1.0.0-next.30":
   version "1.0.0-next.30"
@@ -2477,10 +2477,10 @@ vendors@^1.0.3:
   resolved "https://registry.yarnpkg.com/vendors/-/vendors-1.0.4.tgz#e2b800a53e7a29b93506c3cf41100d16c4c4ad8e"
   integrity sha512-/juG65kTL4Cy2su4P8HjtkTxk6VmJDiOPBufWniqQ6wknac6jNiXS9vU+hO3wgusiyqWlzTbVHi0dyJqRONg3w==
 
-vite@^2.6.10:
-  version "2.6.10"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-2.6.10.tgz#7a4f420c6e2c7d9062c7f9ce4578a817c72b3842"
-  integrity sha512-XbevwpDJMs3lKiGEj0UQScsOCpwHIjFgfzPnFVkPgnxsF9oPv1uGyckLg58XkXv6LnO46KN9yZqJzINFmAxtUg==
+vite@^2.6.12:
+  version "2.6.13"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-2.6.13.tgz#16b3ec85a66d5b461ac29a903874d4357f9af432"
+  integrity sha512-+tGZ1OxozRirTudl4M3N3UTNJOlxdVo/qBl2IlDEy/ZpTFcskp+k5ncNjayR3bRYTCbqSOFz2JWGN1UmuDMScA==
   dependencies:
     esbuild "^0.13.2"
     postcss "^8.3.8"
