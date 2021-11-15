@@ -64,3 +64,23 @@ input[type='email'] {
   -moz-appearance: none;
   appearance: none;
 }
+
+@layer utilities {
+  .text-header {
+    @apply text-black dark:text-white;
+  }
+
+  .text-body {
+    @apply text-gray-600 dark:text-gray-400;
+  }
+
+  .transition-in-out {
+    @apply transition ease-in-out duration-300;
+  }
+
+  @variants hover, focus {
+    .ring-brand {
+      @apply ring ring-teal-400 transition-in-out;
+    }
+  }
+}

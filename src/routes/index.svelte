@@ -32,19 +32,46 @@
   import PinnedRepo from '../components/PinnedRepo.svelte';
   import Technology from '../components/Technology.svelte';
 
+  const repoColors = [
+    {
+      from: 'from-green-400',
+      to: 'to-teal-500',
+    },
+    {
+      from: 'from-cyan-400',
+      to: 'to-blue-500',
+    },
+    {
+      from: 'from-indigo-400',
+      to: 'to-pink-500',
+    },
+    {
+      from: 'from-green-400',
+      to: 'to-teal-500',
+    },
+    {
+      from: 'from-cyan-400',
+      to: 'to-blue-500',
+    },
+    {
+      from: 'from-indigo-400',
+      to: 'to-pink-500',
+    },
+  ];
+
   export let repos;
 </script>
 
 <Container>
   <div class="flex flex-col items-start justify-center w-full max-w-2xl mx-auto mb-16">
-    <h1 class="mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white">
+    <h1 class="mb-4 text-3xl font-bold tracking-tight text-header md:text-5xl">
       Hey, I'm Luke Shay
     </h1>
-    <p class="mb-16 prose text-gray-600 dark:text-gray-400">
-      I'm a developer that focuses on full stack development. I work at Rain & Hail Insurance as a
-      Programmer on the Web Services team.
+    <p class="mb-16 prose text-body">
+      I'm a developer that focuses on full stack development. I am employed at Hy-Vee as a Software
+      Engineer II working on the Aisles Online platform.
     </p>
-    <h3 class="mb-4 text-2xl font-bold tracking-tight text-black md:text-4xl dark:text-white">
+    <h3 class="mb-4 text-2xl font-bold tracking-tight text-header md:text-4xl">
       My Most Used Technologies
     </h3>
     <div class="mb-16 grid gap-14 sm:gap-20 grid-cols-2 sm:grid-cols-4 my-2 w-full">
@@ -62,8 +89,8 @@
         Pinned Github Repositories
       </h3>
       <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 my-2 w-full">
-        {#each repos as repo}
-          <PinnedRepo {repo} />
+        {#each repos as repo, i}
+          <PinnedRepo from={repoColors[i].from} to={repoColors[i].to} {repo} />
         {/each}
       </div>
     {/if}

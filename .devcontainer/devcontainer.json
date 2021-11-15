@@ -1,13 +1,18 @@
 {
   "name": "lukeshay.com",
-  "forwardPorts": [3000, 24678],
+  "forwardPorts": [3000, 3001],
   "build": {
     "dockerfile": "Dockerfile",
     "args": {
       "VARIANT": "16-bullseye"
     }
   },
-  "extensions": ["dbaeumer.vscode-eslint"],
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "svelte.svelte-vscode",
+    "bradlc.vscode-tailwindcss",
+    "esbenp.prettier-vscode"
+  ],
   "runArgs": ["--init"],
   "remoteUser": "node"
 }

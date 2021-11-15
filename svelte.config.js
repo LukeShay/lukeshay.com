@@ -8,7 +8,13 @@ const config = {
   kit: {
     target: '#svelte',
     adapter: vercel(),
-    vite: { server: { hmr: false } },
+    vite: {
+      server: {
+        hmr: {
+          port: 3000,
+        },
+      },
+    },
   },
   preprocess: [
     preprocess({

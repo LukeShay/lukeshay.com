@@ -11,7 +11,7 @@
   {href}
   {target}
   {rel}
-  class="{clazz} text-gray-900 p-2 dark:text-gray-100 hover:ring ring-teal-400 rounded transition ease-in-out duration-300"
+  class="{clazz} text-gray-900 p-2 dark:text-gray-100 hover:ring-brand rounded"
 >
   <slot />
 </a>

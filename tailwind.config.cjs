@@ -1,4 +1,5 @@
 const { fontFamily, spacing } = require('tailwindcss/defaultTheme');
+const { teal, gray } = require('tailwindcss/colors');
 
 module.exports = {
   mode: 'jit',
@@ -9,6 +10,9 @@ module.exports = {
       colors: {
         'blue-opaque': 'rgb(13 42 148 / 18%)',
         ...require('tailwindcss/colors'),
+        brand: {
+          base: teal['400'],
+        },
       },
       fontFamily: {
         sans: ['Inter', ...fontFamily.sans],

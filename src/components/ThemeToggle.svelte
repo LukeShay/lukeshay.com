@@ -51,7 +51,7 @@
 <button
   aria-label="Toggle Dark Mode"
   type="button"
-  class="w-10 h-10 p-3 bg-gray-200 rounded dark:bg-gray-800 hover:ring ring-teal-400 transition ease-in-out duration-300"
+  class="w-10 h-10 p-3 bg-gray-200 rounded dark:bg-gray-800 hover:ring-brand transition-in-out"
   on:click={toggleTheme}
 >
   {#if currentTheme === THEMES.DARK}
