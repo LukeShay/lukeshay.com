@@ -10,7 +10,7 @@
     "test": "exit 0"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.8",
+    "@babel/core": "^7.17.5",
     "@babel/eslint-parser": "^7.15.8",
     "@sveltejs/adapter-vercel": "next",
     "@sveltejs/kit": "next",
