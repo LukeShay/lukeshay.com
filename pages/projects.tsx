@@ -1,8 +1,8 @@
 import type {NextPage} from 'next';
 
-const HomePage: NextPage = () => (
+const ProjectsPage: NextPage = () => (
     <>
-        <h1 className="pb-6 text-4xl font-bold">{'About Me'}</h1>
+        <h1 className="pb-6 text-4xl font-bold">{'My Projects'}</h1>
         <div className="text-slate-700">
             {
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur auctor lorem nec vehicula dictum. Maecenas a quam gravida, volutpat risus a, fringilla massa. Etiam vitae lacinia ipsum, eu auctor velit. Mauris eget odio sit amet nunc volutpat imperdiet vel a ante. Morbi porttitor odio et massa aliquam tempus. Donec suscipit facilisis arcu ac hendrerit. Aenean nisl augue, porttitor quis porta et, varius eu turpis. Duis pharetra mi sed tristique porta. Mauris hendrerit urna lacus, at maximus magna malesuada sollicitudin. Integer volutpat accumsan sollicitudin. In faucibus ultricies odio, et maximus augue euismod ac. Duis aliquet bibendum neque vitae pulvinar. Suspendisse a justo quis orci pretium venenatis. In non mauris vehicula, convallis nisl a, venenatis dui.'
@@ -27,4 +27,4 @@ const HomePage: NextPage = () => (
     </>
 );
 
-export default HomePage;
+export default ProjectsPage;
