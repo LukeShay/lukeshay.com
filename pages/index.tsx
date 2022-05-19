@@ -4,43 +4,25 @@ const Home: NextPage = () => (
     <>
         <h1 className="pb-6 text-4xl font-bold">{'About Me'}</h1>
         <div className="text-slate-700">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc congue finibus magna in eleifend. In nunc leo,
-            volutpat ut ullamcorper tempor, laoreet id purus. Nulla nec metus vestibulum, tincidunt neque sit amet,
-            convallis dolor. Maecenas fringilla malesuada luctus. Vestibulum sem arcu, porta vel bibendum ac, sodales
-            consequat orci. Donec malesuada turpis nec magna tempus maximus quis ut turpis. Praesent eget facilisis
-            nibh. Mauris non sapien sollicitudin nulla pellentesque hendrerit id fringilla tortor. Pellentesque
-            vestibulum blandit enim, in auctor turpis efficitur vel. Fusce cursus porttitor nisi, at pellentesque diam
-            rutrum ullamcorper. Sed sodales lectus vitae nulla viverra, vitae consectetur nulla molestie. Sed semper
-            molestie purus, in rutrum ligula congue in. Maecenas feugiat purus sit amet aliquam facilisis. Fusce vitae
-            libero mi. Ut porta tincidunt enim, vitae blandit urna ultricies et. Sed ornare est ac erat porttitor
-            cursus. Cras fringilla tincidunt massa, vel eleifend ligula maximus sed. Nunc quis felis eget lorem egestas
-            tempor nec eget nisl. Curabitur mattis, tellus vitae egestas mattis, mauris orci luctus ipsum, at tincidunt
-            elit erat in dolor. Vivamus in pellentesque leo, non scelerisque ligula. Pellentesque pretium, mi nec
-            tristique fringilla, magna nibh vulputate libero, vitae congue dolor ipsum at leo. Phasellus sit amet porta
-            lacus, non mattis leo. Aenean leo nisl, suscipit in viverra at, varius et erat. Integer euismod ligula sit
-            amet elit vestibulum, vitae faucibus dui semper. Suspendisse potenti. Donec cursus lectus eget tempor
-            pharetra. Vivamus id lectus sed magna eleifend tempor. Fusce id dignissim justo, eget cursus mauris. Integer
-            vitae consequat eros. Nunc nisi dui, dictum ut finibus nec, tempor hendrerit lorem. Proin gravida arcu a
-            enim consectetur laoreet. Pellentesque eget purus eget ex varius tristique quis ac mi. Nulla auctor
-            ullamcorper arcu, ut accumsan lacus imperdiet in. Sed sed aliquam nulla. Vestibulum ante ipsum primis in
-            faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse id nisl nec turpis venenatis commodo.
-            Donec in fringilla felis, vitae vehicula diam. Curabitur consequat urna at dolor cursus, vitae condimentum
-            turpis efficitur. Maecenas nisl turpis, feugiat porttitor sagittis vel, fermentum non urna. Ut commodo
-            maximus purus vitae ultrices. Morbi ut nibh euismod, ornare libero ut, egestas eros. Phasellus ante nisi,
-            tempus tincidunt nibh et, dignissim molestie risus. Praesent bibendum leo est, id pharetra tellus consequat
-            vel. Aenean eros odio, interdum eget fringilla id, ultricies vitae sapien. Aliquam tempus facilisis magna,
-            vel sodales libero cursus eu. Nullam posuere est quis lacus pretium, a scelerisque risus iaculis. Mauris
-            lacinia, tellus sed ullamcorper sodales, quam ex dapibus lorem, in interdum dolor metus sed orci.
-            Suspendisse dignissim sagittis elit et ultricies. Integer in diam elementum, rhoncus quam non, aliquam nisi.
-            Proin ipsum eros, auctor nec vestibulum ac, dictum vitae ligula. Maecenas nisi mi, efficitur vitae gravida
-            sed, gravida dignissim risus. Vestibulum eu blandit odio. Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Sed auctor nunc in turpis dignissim, eget vestibulum tellus tempor. Phasellus ac dui lorem. Ut in
-            tellus vulputate orci viverra dapibus. Aenean lorem enim, molestie pellentesque elit non, imperdiet laoreet
-            ex. Curabitur pharetra nisl at nunc aliquet, at vulputate quam facilisis. Nam elementum libero at libero
-            euismod pulvinar. Etiam imperdiet, magna aliquam semper placerat, libero ligula vehicula turpis, eget
-            feugiat nisl velit non justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum imperdiet,
-            tortor et ullamcorper vehicula, nisi neque lobortis lorem, quis semper ante arcu ac urna. Vivamus hendrerit
-            sed metus ut maximus.
+            {
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur auctor lorem nec vehicula dictum. Maecenas a quam gravida, volutpat risus a, fringilla massa. Etiam vitae lacinia ipsum, eu auctor velit. Mauris eget odio sit amet nunc volutpat imperdiet vel a ante. Morbi porttitor odio et massa aliquam tempus. Donec suscipit facilisis arcu ac hendrerit. Aenean nisl augue, porttitor quis porta et, varius eu turpis. Duis pharetra mi sed tristique porta. Mauris hendrerit urna lacus, at maximus magna malesuada sollicitudin. Integer volutpat accumsan sollicitudin. In faucibus ultricies odio, et maximus augue euismod ac. Duis aliquet bibendum neque vitae pulvinar. Suspendisse a justo quis orci pretium venenatis. In non mauris vehicula, convallis nisl a, venenatis dui.'
+            }
+
+            {
+                'Aliquam porta viverra ultricies. Nunc et nisi vitae nisi suscipit tempor in et elit. In vel rhoncus libero. Nullam suscipit odio ac interdum rhoncus. Morbi faucibus scelerisque ante, quis suscipit lacus fringilla vitae. Proin vel leo a ligula ultricies tempus eleifend sed ipsum. Mauris fringilla nisi ex, et porta purus molestie ultrices. Nullam venenatis enim ut ipsum pretium, eget placerat mi blandit. Cras semper auctor tellus, nec suscipit tellus pretium eget.'
+            }
+
+            {
+                'Praesent interdum, arcu at sagittis mollis, nisi justo dictum diam, tempor dignissim ex massa sit amet sem. Nunc vitae condimentum elit. Nulla facilisi. Mauris eget egestas velit, id lacinia arcu. Fusce nunc orci, imperdiet sed ultrices vel, venenatis vel tellus. Morbi varius lorem in nibh varius scelerisque. Donec auctor, massa at maximus ornare, enim lacus varius odio, non convallis felis mi eu neque.'
+            }
+
+            {
+                'Suspendisse porta dapibus metus, vitae egestas erat tincidunt dictum. Praesent nulla purus, sollicitudin eget sem ut, ultricies aliquet nisi. Aenean ornare egestas tortor. Donec ut massa nisi. Maecenas sodales odio a venenatis tincidunt. Pellentesque sed enim sed ex maximus elementum non nec purus. Etiam ut dolor lacus. Suspendisse tempor ut purus at accumsan. Fusce lobortis mauris ut nisl viverra, ac faucibus lectus hendrerit. Maecenas nec enim at tellus tincidunt eleifend.'
+            }
+
+            {
+                'Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum eu accumsan arcu. Fusce rutrum condimentum consectetur. Ut tempus sapien risus, at suscipit eros molestie scelerisque. Curabitur id justo vestibulum, bibendum leo ut, sodales lectus. Morbi eleifend ornare massa, vitae tincidunt ex semper sit amet. Maecenas porta mauris eu tellus euismod scelerisque. Aenean dictum neque vitae urna interdum, id feugiat orci placerat. Nulla nulla lorem, lacinia id eros vitae, accumsan convallis velit. Etiam elit dolor, elementum eget semper eu, efficitur id nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce ut gravida nisl. Vivamus cursus nisl mollis enim ornare, et eleifend quam condimentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla dapibus consequat tellus vitae scelerisque. Etiam leo arcu, hendrerit eget urna eu, scelerisque egestas arcu.'
+            }
         </div>
     </>
 );
