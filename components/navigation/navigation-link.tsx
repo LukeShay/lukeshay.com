@@ -52,7 +52,7 @@ const NavigationLink: FC<NavigationLinkProps> = ({children, href, icon, shortcut
     );
 
     const className = classNames(
-        'block items-center rounded-md py-2 px-4 text-sm text-slate-700 duration-200 ease-in-out hover:bg-slate-100',
+        'block items-center rounded-md py-1.5 px-4 text-sm text-slate-700 duration-200 ease-in-out hover:bg-slate-100 mb-0.5',
         ariaCurrent === 'page' && 'bg-slate-100'
     );
 
