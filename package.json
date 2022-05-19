@@ -4,6 +4,7 @@
     "private": true,
     "scripts": {
         "build": "next build",
+        "postbuild": "next-sitemap",
         "dev": "next dev",
         "lint": "eslint --ignore-path .gitignore './**/*.{ts,js,cjs,json}'",
         "lint:fix": "pnpm run lint --fix",
@@ -24,6 +25,7 @@
         "autoprefixer": "10.4.7",
         "eslint": "8.15.0",
         "eslint-config-get-off-my-lawn": "7.1.0",
+        "next-sitemap": "2.5.20",
         "postcss": "8.4.14",
         "prettier": "2.6.2",
         "prettier-config-get-off-my-lawn": "1.0.0",
