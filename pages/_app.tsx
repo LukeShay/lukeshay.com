@@ -6,7 +6,7 @@ import {Navigation} from '../components/navigation';
 
 const MyApp: FC<AppProps> = ({Component, pageProps}) => (
     <div className="h-screen w-full bg-slate-200 p-2">
-        <div className="mx-auto h-full max-w[1600px]">
+        <div className="max-w[1600px] mx-auto h-full">
             <div className="flex h-full w-full flex-row">
                 <div className="w-72">
                     <Navigation />

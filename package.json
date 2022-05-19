@@ -7,7 +7,7 @@
         "dev": "next dev",
         "lint": "eslint --ignore-path .gitignore './**/*.{ts,js,cjs,json}'",
         "lint:fix": "pnpm run lint --fix",
-        "prettier": "prettier --check --ignore-unknown .",
+        "prettier": "prettier --check --ignore-path .gitignore --ignore-unknown .",
         "prettier:fix": "pnpm run prettier --write",
         "start": "next start"
     },
