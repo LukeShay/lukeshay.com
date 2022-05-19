@@ -2,7 +2,7 @@ import type {NextPage} from 'next';
 
 const Home: NextPage = () => (
     <>
-        <h1 className="text-4xl font-bold pb-6">{'About Me'}</h1>
+        <h1 className="pb-6 text-4xl font-bold">{'About Me'}</h1>
         <div className="text-slate-700">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc congue finibus magna in eleifend. In nunc leo,
             volutpat ut ullamcorper tempor, laoreet id purus. Nulla nec metus vestibulum, tincidunt neque sit amet,
