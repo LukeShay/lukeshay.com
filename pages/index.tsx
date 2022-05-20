@@ -1,4 +1,4 @@
-import {BriefcaseIcon, CakeIcon} from '@heroicons/react/outline';
+import {CakeIcon} from '@heroicons/react/outline';
 import type {NextPage} from 'next';
 import type {FC, ReactNode} from 'react';
 
