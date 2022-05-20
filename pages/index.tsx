@@ -94,7 +94,7 @@ const HomePage: NextPage = () => (
                 title="Started Internship at Maverick Software Consulting"
             />
             <TimeLineItem
-                date="August 2021"
+                date="August 2017"
                 description="A short description"
                 icon={<AcademicCapIcon className="h-6 w-6 text-slate-700" />}
                 title="Started College at Iowa State University"
