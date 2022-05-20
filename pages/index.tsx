@@ -24,7 +24,7 @@ const TimeLineItem: FC<TimeLineItemProps> = ({title, description, date, icon}) =
                 <h3>{title}</h3>
                 <p className="text-sm text-slate-500">{description}</p>
             </div>
-            <p className="text-sm text-slate-500 w-20 text-right">{date}</p>
+            <p className="text-sm text-slate-500 w-[4.125rem] text-right">{date}</p>
         </div>
     </div>
 );
