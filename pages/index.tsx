@@ -30,7 +30,7 @@ const TimeLineItem: FC<TimeLineItemProps> = ({title, description, date, icon}) =
 );
 
 const HomePage: NextPage = () => (
-    <>
+    <div className="mb-28">
         <div className="flex items-center justify-between pb-12">
             <div className="pr-12">
                 <h1 className="pb-2 text-4xl font-bold">{'Luke Shay'}</h1>
@@ -107,7 +107,7 @@ const HomePage: NextPage = () => (
                 title="Started College at Iowa State University"
             />
         </div>
-    </>
+    </div>
 );
 
 export default HomePage;
