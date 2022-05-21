@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import type {FC} from 'react';
+import type {FC, ReactNode} from 'react';
 import {useEffect} from 'react';
 import {useRouter} from 'next/router';
 import {ExternalLinkIcon} from '@heroicons/react/outline';
@@ -7,8 +7,8 @@ import {ExternalLinkIcon} from '@heroicons/react/outline';
 const classNames = (...args: (boolean | string | null | undefined)[]): string => args.filter(Boolean).join(' ');
 
 type NavigationLinkProps = {
-    children: React.ReactNode;
-    icon: React.ReactNode;
+    children: ReactNode;
+    icon: ReactNode;
     href: string;
     shortcut?: string;
 };
@@ -34,15 +34,15 @@ const NavigationLink: FC<NavigationLinkProps> = ({children, href, icon, shortcut
         <div className="flex justify-between">
             <div className="flex items-center">
                 {icon}
-                {children}
+                <span className="sr-only md:not-sr-only">{children}</span>
             </div>
             {shortcut && !external && (
-                <div className="flex h-5 w-5 items-center justify-center rounded bg-slate-300 text-xs">
+                <div className="hidden h-5 w-5 items-center justify-center rounded bg-slate-300 text-xs md:flex">
                     <p className="text-slate-500">{shortcut}</p>
                 </div>
             )}
             {external && (
-                <div className="flex h-5 w-5 items-center justify-center">
+                <div className="hidden h-5 w-5 items-center justify-center md:flex">
                     <p className="text-slate-500">
                         <ExternalLinkIcon className="h-4 w-4" />
                     </p>
@@ -61,13 +61,11 @@ const NavigationLink: FC<NavigationLinkProps> = ({children, href, icon, shortcut
             {content}
         </a>
     ) : (
-        <li>
-            <Link href={href} passHref>
-                <a aria-current={ariaCurrent} className={className}>
-                    {content}
-                </a>
-            </Link>
-        </li>
+        <Link href={href} passHref>
+            <a aria-current={ariaCurrent} className={className}>
+                {content}
+            </a>
+        </Link>
     );
 };
 

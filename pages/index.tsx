@@ -24,7 +24,7 @@ const TimeLineItem: FC<TimeLineItemProps> = ({title, description, date, icon}) =
                 <h3>{title}</h3>
                 <p className="text-sm text-slate-500">{description}</p>
             </div>
-            <p className="text-sm text-slate-500 w-[4.125rem] text-right">{date}</p>
+            <p className="w-32 text-right text-sm text-slate-500 md:w-24">{date}</p>
         </div>
     </div>
 );
@@ -54,15 +54,15 @@ const HomePage: NextPage = () => (
         <div>
             <TimeLineItem
                 date="Dec 2021"
-                description="Software Engineer II working on Aisles Online"
+                description="Software Engineer II doing fullstack development on Aisles Online"
                 icon={<HyVeeIcon className="h-6 w-6" height={24} width={24} />}
                 title="Started Job at Hy-Vee"
             />
             <TimeLineItem
                 date="May 2021"
-                description="A short description"
+                description="Programmer working on building web tools for agents, agencies, and customers"
                 icon={<RainAndHailIcon className="h-6 w-6" height={24} width={24} />}
-                title="Programmer working on building web tools for agents, agencies, and customers"
+                title="Started Full-Time at Rain and Hail"
             />
             <TimeLineItem
                 date="May 2021"
