@@ -8,6 +8,7 @@ specifiers:
   autoprefixer: 10.4.7
   eslint: 8.15.0
   eslint-config-get-off-my-lawn: 7.1.0
+  fathom-client: 3.4.1
   next: 12.1.6
   next-sitemap: 2.5.20
   postcss: 8.4.14
@@ -22,6 +23,7 @@ specifiers:
 
 dependencies:
   '@heroicons/react': 1.0.6_react@18.1.0
+  fathom-client: 3.4.1
   next: 12.1.6_ef5jwxihqo6n7gxfmzogljlgcm
   react: 18.1.0
   react-dom: 18.1.0_react@18.1.0
@@ -1796,6 +1798,10 @@ packages:
     dependencies:
       reusify: 1.0.4
     dev: true
+
+  /fathom-client/3.4.1:
+    resolution: {integrity: sha512-iQFKx9B9RDeGLzgNqsaXWg3Fvu7yfq1Z8GjpAG3DP8IoGoPRWOOktpM7DUKiUzoE3d37hdvDQvkqUHfNzVwimg==}
+    dev: false
 
   /file-entry-cache/6.0.1:
     resolution: {integrity: sha512-7Gps/XWymbLk2QLYK4NzpMOrYjMhdIxXuIvy2QBsLE6ljuodKvdkWs/cpyJJ3CVIVpH0Oi1Hvg1ovbMzLdFBBg==}
