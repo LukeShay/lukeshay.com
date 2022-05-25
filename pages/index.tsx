@@ -2,12 +2,13 @@ import {CakeIcon} from '@heroicons/react/outline';
 import type {NextPage} from 'next';
 import type {FC, ReactNode} from 'react';
 
-import {HyVeeIcon} from '../components/logos/hy-vee-icon';
-import {IowaStateIcon} from '../components/logos/iowa-state-icon';
-import {MaverickSoftwareConsultingIcon} from '../components/logos/maverick-software-consulting-icon';
-import {RainAndHailIcon} from '../components/logos/rain-and-hail-icon';
-import {SourceAlliesIcon} from '../components/logos/source-allies-icon';
-import {VertexSoftwareIcon} from '../components/logos/vertex-software-icon';
+import {List, ListItem} from 'components/list';
+import {HyVeeIcon} from 'components/logos/hy-vee-icon';
+import {IowaStateIcon} from 'components/logos/iowa-state-icon';
+import {MaverickSoftwareConsultingIcon} from 'components/logos/maverick-software-consulting-icon';
+import {RainAndHailIcon} from 'components/logos/rain-and-hail-icon';
+import {SourceAlliesIcon} from 'components/logos/source-allies-icon';
+import {VertexSoftwareIcon} from 'components/logos/vertex-software-icon';
 
 type TimeLineItemProps = {
     title: string;
@@ -17,16 +18,9 @@ type TimeLineItemProps = {
 };
 
 const TimeLineItem: FC<TimeLineItemProps> = ({title, description, date, icon}) => (
-    <div className="flex items-center">
-        <div className="pr-4">{icon}</div>
-        <div className="flex w-full items-center justify-between border-b border-slate-200 py-5">
-            <div>
-                <h3>{title}</h3>
-                <p className="text-sm text-slate-500">{description}</p>
-            </div>
-            <p className="w-32 text-right text-sm text-slate-500 md:w-24">{date}</p>
-        </div>
-    </div>
+    <ListItem contentClassName="flex justify-between" description={description} icon={icon} title={title}>
+        <p className="w-32 text-right text-sm text-slate-500 md:w-24">{date}</p>
+    </ListItem>
 );
 
 const HomePage: NextPage = () => (
@@ -51,7 +45,7 @@ const HomePage: NextPage = () => (
                 src="https://www.gravatar.com/avatar/c57099d7997c3af5a04728e920d8e243.png?s=2048"
             />
         </div>
-        <div>
+        <List>
             <TimeLineItem
                 date="Dec 2021"
                 description="Software Engineer II doing fullstack development on Aisles Online"
@@ -106,7 +100,7 @@ const HomePage: NextPage = () => (
                 icon={<IowaStateIcon className="h-6 w-6" height={24} width={24} />}
                 title="Started College at Iowa State University"
             />
-        </div>
+        </List>
     </div>
 );
 

@@ -4,8 +4,8 @@ import type {AppProps} from 'next/app';
 import * as Fathom from 'fathom-client';
 import router from 'next/router';
 
-import '../styles/globals.css';
-import {Navigation} from '../components/navigation';
+import 'styles/globals.css';
+import {Navigation} from 'components/navigation';
 
 // Record a pageview when route changes
 router.events.on('routeChangeComplete', () => {

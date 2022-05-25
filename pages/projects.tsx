@@ -4,6 +4,8 @@ import type {InferGetStaticPropsType, NextPage} from 'next';
 import {graphql} from '@octokit/graphql';
 import {ExternalLinkIcon} from '@heroicons/react/outline';
 
+import {List, ListItem} from 'components/list';
+
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type,@typescript-eslint/explicit-module-boundary-types
 const getStaticProps = async () => {
     const octokit = graphql.defaults({
@@ -46,18 +48,30 @@ const getStaticProps = async () => {
 };
 
 const ProjectsPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({repos}) => (
-    <>
-        <h1 className="pb-6 text-4xl font-bold">{'My Projects'}</h1>
-        {repos.map(({id, nameWithOwner, description}) => (
-            <a href={`https://github.com/${nameWithOwner}`} key={id} rel="noopener noreferrer" target="_blank">
-                <div className="relative my-6 rounded-md border border-slate-300 p-6 duration-300 ease-in-out hover:scale-y-[1.0125] hover:scale-x-[1.0125] hover:border-slate-500">
-                    <ExternalLinkIcon className="absolute top-4 right-4 h-4 w-4 text-slate-500" />
-                    <h2 className="text-lg font-semibold">{nameWithOwner}</h2>
-                    <p className="text-slate-700">{description}</p>
-                </div>
-            </a>
-        ))}
-    </>
+    <div className="mb-28">
+        <div className="pb-12">
+            <h1 className="pb-6 text-4xl font-bold">{'My Projects'}</h1>
+            <p className="text-slate-600">
+                {
+                    'The following is a list of open source projects I have worked on that showcase my skills and experience. The source code for the projects can be found by clicking on the link.'
+                }
+            </p>
+        </div>
+        <List>
+            {repos.map(({id, nameWithOwner, description}) => (
+                <a href={`https://github.com/${nameWithOwner}`} key={id} rel="noopener noreferrer" target="_blank">
+                    <ListItem
+                        className="-mx-2 rounded-md px-2 hover:bg-slate-200"
+                        contentClassName="flex justify-between"
+                        description={description}
+                        title={nameWithOwner}
+                    >
+                        <ExternalLinkIcon className="h4 w-4 text-slate-500" />
+                    </ListItem>
+                </a>
+            ))}
+        </List>
+    </div>
 );
 
 export {getStaticProps};
