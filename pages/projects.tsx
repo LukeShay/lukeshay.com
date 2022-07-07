@@ -65,6 +65,7 @@ const ProjectsPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (
             contentClassName="flex justify-between"
             description={description}
             title={nameWithOwner}
+            titleAs="h2"
           >
             <ExternalLinkIcon className="h4 w-4 text-slate-500" />
           </ListItem>
