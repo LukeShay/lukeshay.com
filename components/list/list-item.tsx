@@ -18,7 +18,7 @@ const ListItem: FC<ListItemProps> = ({ children, icon, title, description, class
       {title && description && (
         <div>
           <h3>{title}</h3>
-          <p className="text-sm text-slate-500">{description}</p>
+          <p className="text-sm text-slate-700">{description}</p>
         </div>
       )}
       {children}

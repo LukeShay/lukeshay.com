@@ -19,7 +19,7 @@ type TimeLineItemProps = {
 
 const TimeLineItem: FC<TimeLineItemProps> = ({ title, description, date, icon }) => (
   <ListItem contentClassName="flex justify-between" description={description} icon={icon} title={title}>
-    <p className="w-32 text-right text-sm text-slate-500 md:w-24">{date}</p>
+    <p className="w-32 text-right text-sm text-slate-700 md:w-24">{date}</p>
   </ListItem>
 );
 
