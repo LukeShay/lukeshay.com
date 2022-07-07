@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import type { ImageProps } from 'next/image';
+import Image from 'next/future/image';
+import type { ImageProps } from 'next/future/image';
 import type { FC } from 'react';
 
 type LinkedInIconProps = Omit<ImageProps, 'alt' | 'src'> & {
