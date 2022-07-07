@@ -1,16 +1,16 @@
 import Image from 'next/image';
-import type {ImageProps} from 'next/image';
-import type {FC} from 'react';
+import type { ImageProps } from 'next/image';
+import type { FC } from 'react';
 
 type SourceAlliesIconProps = Omit<ImageProps, 'alt' | 'src'> & {
-    imageClassName?: string;
+  imageClassName?: string;
 };
 
-const SourceAlliesIcon: FC<SourceAlliesIconProps> = ({className, imageClassName, ...props}) => (
-    <div className={className}>
-        <Image {...props} alt="Source Allies" className={imageClassName} src="/images/logos/source-allies-icon.png" />
-    </div>
+const SourceAlliesIcon: FC<SourceAlliesIconProps> = ({ className, imageClassName, ...props }) => (
+  <div className={className}>
+    <Image {...props} alt="Source Allies" className={imageClassName} src="/images/logos/source-allies-icon.png" />
+  </div>
 );
 
-export type {SourceAlliesIconProps};
-export {SourceAlliesIcon};
+export type { SourceAlliesIconProps };
+export { SourceAlliesIcon };
