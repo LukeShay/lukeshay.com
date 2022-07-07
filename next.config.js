@@ -57,10 +57,12 @@ const nextConfig = {
     },
     legacyBrowsers: false,
   },
-  headers: () => ({
-    headers: securityHeaders,
-    source: '/(.*)',
-  }),
+  headers: () => [
+    {
+      headers: securityHeaders,
+      source: '/(.*)',
+    },
+  ],
   reactStrictMode: true,
   swcMinify: true,
 };
