@@ -9,6 +9,8 @@ import { MaverickSoftwareConsultingIcon } from 'components/logos/maverick-softwa
 import { RainAndHailIcon } from 'components/logos/rain-and-hail-icon';
 import { SourceAlliesIcon } from 'components/logos/source-allies-icon';
 import { VertexSoftwareIcon } from 'components/logos/vertex-software-icon';
+import { Gravatar } from 'components/gravatar';
+import { Link } from 'components/link';
 
 type TimeLineItemProps = {
   title: string;
@@ -30,7 +32,9 @@ const HomePage: NextPage = () => (
         <h1 className="pb-2 text-4xl font-bold">{'Luke Shay'}</h1>
         <h2 className="pb-4">
           {'Software Engineer II at '}
-          <strong>{'Hy-Vee'}</strong>
+          <Link className="font-bold underline" href="https://www.hy-vee.com/">
+            {'Hy-Vee'}
+          </Link>
         </h2>
         <p className="text-slate-600">
           {
@@ -38,12 +42,7 @@ const HomePage: NextPage = () => (
           }
         </p>
       </div>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        alt="Luke Shay"
-        className="h-32 w-32 rounded-full"
-        src="https://www.gravatar.com/avatar/c57099d7997c3af5a04728e920d8e243.png?s=2048"
-      />
+      <Gravatar />
     </div>
     <List>
       <TimeLineItem
