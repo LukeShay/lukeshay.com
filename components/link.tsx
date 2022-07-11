@@ -13,6 +13,7 @@ const Link: FC<LinkProps> = (props) => {
     const { children, href, ...externalProps } = props as ExternalLinkProps;
 
     return (
+      // eslint-disable-next-line react/jsx-no-target-blank
       <a href={href} rel="noreferrer" target="_blank" {...externalProps}>
         {children}
       </a>
