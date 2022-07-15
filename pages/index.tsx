@@ -55,7 +55,7 @@ const timeLineItems: (Omit<TimeLineItemProps, 'icon'> & {
   },
   {
     date: 'Apr 2021',
-    description: 'Asked my girlfriend to marry me at ISU Campanile',
+    description: 'Asked my girlfriend to marry me at the ISU Campanile',
     icon: CakeIcon as Icon,
     title: 'Got Engaged',
   },
