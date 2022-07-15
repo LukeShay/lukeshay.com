@@ -1,15 +1,14 @@
 import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
-import Head from 'next/head';
 
 import 'styles/globals.css';
 import { Navigation } from 'components/navigation';
+import { Seo } from 'components/seo';
+import type { Page } from 'lib/client/types/page';
 
-const MyApp: NextPage<AppProps> = ({ Component, pageProps }) => (
+const MyApp: NextPage<Omit<AppProps, 'Component'> & { Component: Page }> = ({ Component, pageProps }) => (
   <>
-    <Head>
-      <title>{'Luke Shay'}</title>
-    </Head>
+    <Seo description={Component.description} title={Component.title} />
     <div className="h-screen w-full bg-slate-200 p-2 pb-12 md:pb-0">
       <div className="max-w[1600px] mx-auto h-full">
         <div className="flex h-full w-full flex-row">

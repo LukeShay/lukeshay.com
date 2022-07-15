@@ -1,6 +1,6 @@
-import type { NextPage } from 'next';
+import type { Page } from 'lib/client/types/page';
 
-const ContactPage: NextPage = () => (
+const ContactPage: Page = () => (
   <div>
     <iframe
       frameBorder="0"
@@ -15,5 +15,8 @@ const ContactPage: NextPage = () => (
     </iframe>
   </div>
 );
+
+ContactPage.title = 'Luke Shay | Contact';
+ContactPage.description = 'Contact Luke Shay.';
 
 export default ContactPage;

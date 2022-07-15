@@ -1,10 +1,12 @@
 import process from 'node:process';
 
-import type { InferGetStaticPropsType, NextPage } from 'next';
+import type { InferGetStaticPropsType } from 'next';
 import { graphql } from '@octokit/graphql';
 import { ExternalLinkIcon } from '@heroicons/react/outline';
 
 import { List, ListItem } from 'components/list';
+import type { Page } from 'lib/client/types/page';
+import { Link } from 'components/link';
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type,@typescript-eslint/explicit-module-boundary-types
 const getStaticProps = async () => {
@@ -47,7 +49,7 @@ const getStaticProps = async () => {
   };
 };
 
-const ProjectsPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ repos }) => (
+const ProjectsPage: Page<InferGetStaticPropsType<typeof getStaticProps>> = ({ repos }) => (
   <div className="mb-28">
     <div className="pb-12">
       <h1 className="pb-6 text-4xl font-bold">{'My Projects'}</h1>
@@ -59,7 +61,7 @@ const ProjectsPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (
     </div>
     <List>
       {repos.map(({ id, nameWithOwner, description }) => (
-        <a href={`https://github.com/${nameWithOwner}`} key={id} rel="noopener noreferrer" target="_blank">
+        <Link href={`https://github.com/${nameWithOwner}`} key={id}>
           <ListItem
             className="-mx-2 rounded-md px-2 hover:bg-slate-200"
             contentClassName="flex justify-between"
@@ -69,11 +71,15 @@ const ProjectsPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (
           >
             <ExternalLinkIcon className="h4 w-4 text-slate-500" />
           </ListItem>
-        </a>
+        </Link>
       ))}
     </List>
   </div>
 );
+
+ProjectsPage.title = 'Luke Shay | Projects';
+ProjectsPage.description =
+  'Software Engineer II at Hy-Vee. Built using Next.js and TailwindCSS. Contains list of my pinned projects.';
 
 export { getStaticProps };
 export default ProjectsPage;
