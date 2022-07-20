@@ -39,5 +39,7 @@ jobs:
           cache: 'pnpm'
       - run: pnpm install --frozen-lockfile
       - run: pnpm run build
+        env:
+          GITHUB_API_TOKEN: ${{ secrets.GH_API_TOKEN }}
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
