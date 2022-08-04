@@ -10,7 +10,7 @@ specifiers:
   eslint: 8.20.0
   eslint-config-get-off-my-lawn: 7.1.0
   next: 12.2.3
-  next-sitemap: 3.1.15
+  next-sitemap: 3.1.16
   postcss: 8.4.14
   prettier: 2.7.1
   prettier-plugin-packagejson: 2.2.18
@@ -34,7 +34,7 @@ devDependencies:
   autoprefixer: 10.4.7_postcss@8.4.14
   eslint: 8.20.0
   eslint-config-get-off-my-lawn: 7.1.0_eslint@8.20.0
-  next-sitemap: 3.1.15_6lynxinfr2uix4icggokqiwwie
+  next-sitemap: 3.1.16_6lynxinfr2uix4icggokqiwwie
   postcss: 8.4.14
   prettier: 2.7.1
   prettier-plugin-packagejson: 2.2.18_prettier@2.7.1
@@ -2448,8 +2448,8 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
 
-  /next-sitemap/3.1.15_6lynxinfr2uix4icggokqiwwie:
-    resolution: {integrity: sha512-zLLbSRQjArBlwQp3SUG1nt9TDdJGvLzRj/sQaV4ZovIl4VlocKuFxlX5aWbVQ7iLhTxr8uGU7v8cFENiZCGRjA==}
+  /next-sitemap/3.1.16_6lynxinfr2uix4icggokqiwwie:
+    resolution: {integrity: sha512-kczTKLB1ifqi44mMImv/sLRsqxy/O4DXJ4mx/1l23vyx6QFWqeuHxS0duEL/EsChcVJUMWV4FNg2pIiX31xxmg==}
     engines: {node: '>=14.18'}
     hasBin: true
     peerDependencies:
