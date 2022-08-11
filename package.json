@@ -5,19 +5,19 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "pnpm run typecheck && pnpm run build.client && pnpm run build.ssr",
+    "build": "npm run typecheck && npm run build.client && npm run build.ssr",
     "build.client": "vite build",
     "build.ssr": "vite build --ssr src/entry.cloudflare.tsx",
-    "dev": "pnpm run dev.ssr",
+    "dev": "npm run dev.ssr",
     "dev.client": "vite",
     "dev.debug": "node --inspect-brk node_modules/vite/bin/vite.js --force --mode ssr",
     "dev.ssr": "node --inspect node_modules/vite/bin/vite.js --mode ssr",
     "lint": "eslint --ignore-path .gitignore './**/*.{ts,js,cjs,json}'",
-    "lint:fix": "pnpm run lint --fix",
+    "lint:fix": "npm run lint --fix",
     "prettier": "prettier --check --ignore-path .gitignore --ignore-unknown .",
-    "prettier:fix": "pnpm run prettier --write",
+    "prettier:fix": "npm run prettier --write",
     "serve": "wrangler pages dev ./dist",
-    "start": "pnpm run dev",
+    "start": "npm run dev",
     "typecheck": "tsc --incremental --noEmit"
   },
   "dependencies": {
@@ -46,6 +46,6 @@
   },
   "engines": {
     "node": "16.x",
-    "pnpm": ">=6"
+    "npm": ">=6"
   }
 }
