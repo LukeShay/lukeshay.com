@@ -1,34 +1,81 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Qwik qwik-app ⚡️
 
-## Getting Started
+- File based routing and MDX support
+- Vite.js tooling.
+- Cloudflare Pages.
+- Prettier code formatter.
+- Tailwind CSS framework.
+- Use React components into your Qwik app
 
-First, run the development server:
+## Development Builds
 
-```bash
+### Client only
+
+During development, the index.html is not a result of server-side rendering, but rather the Qwik app is built using client-side JavaScript only. This is ideal for development with Vite and its ability to reload modules quickly and on-demand. However, this mode is only for development and does not showcase "how" Qwik works since JavaScript is required to execute, and Vite imports many development modules for the app to work.
+
+```
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Server-side Rendering (SSR) and Client
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Server-side rendered index.html, with client-side modules prefetched and loaded by the browser. This can be used to test out server-side rendered content during development, but will be slower than the client-only development builds.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```
+npm run dev.ssr
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Production Builds
 
-## Learn More
+A production build should generate the client and server modules by running both client and server build commands.
 
-To learn more about Next.js, take a look at the following resources:
+```
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Client Modules
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Production build that creates only the client-side modules that are dynamically imported by the browser.
 
-## Deploy on Vercel
+```
+npm run build.client
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Server Modules
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Production build that creates the server-side render (SSR) module that is used by the server to render the HTML.
+
+```
+npm run build.ssr
+```
+
+## Cloudflare Pages
+
+Cloudflare's [wrangler](https://github.com/cloudflare/wrangler) CLI can be used to preview a production build locally. To start a local server, run:
+
+```
+npm run serve
+```
+
+Then visit [http://localhost:8787/](http://localhost:8787/)
+
+### Deployments
+
+[Cloudflare Pages](https://pages.cloudflare.com/) are deployable through their [Git provider integrations](https://developers.cloudflare.com/pages/platform/git-integration/).
+
+If you don't already have an account, then [create a Cloudflare account here](https://dash.cloudflare.com/sign-up/pages). Next go to your dashboard and follow the [Cloudflare Pages deployment guide](https://developers.cloudflare.com/pages/framework-guides/deploy-anything/).
+
+Within the projects "Settings" for "Build and deployments", the "Build command" should be `npm run build`, and the "Build output directory" should be set to `dist`.
+
+--------------------
+
+## Related
+
+- [Qwik Docs](https://qwik.builder.io/)
+- [Qwik Github](https://github.com/BuilderIO/qwik)
+- [@QwikDev](https://twitter.com/QwikDev)
+- [Discord](https://qwik.builder.io/chat)
+- [Vite](https://vitejs.dev/)
+- [Partytown](https://partytown.builder.io/)
+- [Mitosis](https://github.com/BuilderIO/mitosis)
+- [Builder.io](https://www.builder.io/)
