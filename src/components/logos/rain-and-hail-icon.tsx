@@ -1,7 +1,10 @@
 import { component$ } from '@builder.io/qwik';
 
-type RainAndHailIconProps = Partial<Omit<HTMLImageElement, 'alt' | 'src'>> & {
+type RainAndHailIconProps = {
   imageClassName?: string;
+  className?: string;
+  width?: number;
+  height?: number;
 };
 
 const RainAndHailIcon = component$<RainAndHailIconProps>(({ className, imageClassName, ...props }) => (

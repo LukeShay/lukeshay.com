@@ -1,7 +1,10 @@
 import { component$ } from '@builder.io/qwik';
 
-type LinkedInIconProps = Partial<Omit<HTMLImageElement, 'alt' | 'src'>> & {
+type LinkedInIconProps = {
   imageClassName?: string;
+  className?: string;
+  width?: number;
+  height?: number;
 };
 
 const LinkedInIcon = component$<LinkedInIconProps>(({ className, imageClassName, ...props }) => (

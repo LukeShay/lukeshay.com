@@ -1,7 +1,10 @@
 import { component$ } from '@builder.io/qwik';
 
-type HyVeeIconProps = Partial<Omit<HTMLImageElement, 'alt' | 'src'>> & {
+type HyVeeIconProps = {
   imageClassName?: string;
+  className?: string;
+  width?: number;
+  height?: number;
 };
 
 const HyVeeIcon = component$<HyVeeIconProps>(({ className, imageClassName, ...props }) => (

@@ -1,3 +1,5 @@
+import process from 'node:process';
+
 import { graphql } from '@octokit/graphql';
 import type { RequestHandler } from '@builder.io/qwik-city';
 import { useEndpoint } from '@builder.io/qwik-city';

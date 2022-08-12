@@ -1,7 +1,10 @@
 import { component$ } from '@builder.io/qwik';
 
-type IowaStateIconProps = Partial<Omit<HTMLImageElement, 'alt' | 'src'>> & {
+type IowaStateIconProps = {
   imageClassName?: string;
+  className?: string;
+  width?: number;
+  height?: number;
 };
 
 const IowaStateIcon = component$<IowaStateIconProps>(({ className, imageClassName, ...props }) => (

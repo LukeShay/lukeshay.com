@@ -1,7 +1,10 @@
 import { component$ } from '@builder.io/qwik';
 
-type MaverickSoftwareConsultingIconProps = Partial<Omit<HTMLImageElement, 'alt' | 'src'>> & {
+type MaverickSoftwareConsultingIconProps = {
   imageClassName?: string;
+  className?: string;
+  width?: number;
+  height?: number;
 };
 
 const MaverickSoftwareConsultingIcon = component$<MaverickSoftwareConsultingIconProps>(

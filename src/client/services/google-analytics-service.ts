@@ -4,7 +4,7 @@ const gtag = (...args: any[]): void => window.gtag?.(...args);
 /* eslint-enable */
 
 const trackPageView = (url: string): void => {
-  gtag('config', process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
+  gtag('config', 'G-45NHHK5CPW', {
     // eslint-disable-next-line camelcase
     page_path: url,
   });

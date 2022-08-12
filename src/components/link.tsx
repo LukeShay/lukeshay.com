@@ -1,6 +1,9 @@
 import { component$, Slot } from '@builder.io/qwik';
 
-type LinkProps = Partial<Omit<HTMLAnchorElement, 'rel' | 'target'>>;
+type LinkProps = {
+  href: string;
+  className?: string;
+};
 
 const Link = component$<LinkProps>(({ href, ...props }) => {
   if (href.startsWith('http')) {

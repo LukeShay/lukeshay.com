@@ -1,7 +1,10 @@
 import { component$ } from '@builder.io/qwik';
 
-type GithubIconProps = Partial<Omit<HTMLImageElement, 'alt' | 'src'>> & {
+type GithubIconProps = {
   imageClassName?: string;
+  className?: string;
+  width?: number;
+  height?: number;
 };
 
 const GithubIcon = component$<GithubIconProps>(({ className, imageClassName, ...props }) => (

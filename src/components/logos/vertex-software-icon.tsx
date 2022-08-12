@@ -1,7 +1,10 @@
 import { component$ } from '@builder.io/qwik';
 
-type VertexSoftwareIconProps = Partial<Omit<HTMLImageElement, 'alt' | 'src'>> & {
+type VertexSoftwareIconProps = {
   imageClassName?: string;
+  className?: string;
+  width?: number;
+  height?: number;
 };
 
 const VertexSoftwareIcon = component$<VertexSoftwareIconProps>(({ className, imageClassName, ...props }) => (

@@ -1,7 +1,10 @@
 import { component$ } from '@builder.io/qwik';
 
-type SourceAlliesIconProps = Partial<Omit<HTMLImageElement, 'alt' | 'src'>> & {
+type SourceAlliesIconProps = {
   imageClassName?: string;
+  className?: string;
+  width?: number;
+  height?: number;
 };
 
 const SourceAlliesIcon = component$<SourceAlliesIconProps>(({ className, imageClassName, ...props }) => (
