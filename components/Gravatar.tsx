@@ -4,9 +4,9 @@ import { tw } from "@twind";
 import Image from "~/components/Image.tsx";
 import type { ImageProps } from "~/components/Image.tsx";
 
-type GravatarProps = Omit<ImageProps, "src">;
+export type GravatarProps = Omit<ImageProps, "src">;
 
-const Gravatar = ({
+export const Gravatar = ({
   className,
   alt,
   height,
@@ -22,6 +22,3 @@ const Gravatar = ({
     {...props}
   />
 );
-
-export type { GravatarProps };
-export { Gravatar };
