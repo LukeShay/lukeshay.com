@@ -1,7 +1,7 @@
 /** @jsx h */
 import { h } from "preact";
 import { tw } from "@twind";
-import { Navigation } from "./navigation/navigation.tsx";
+import { Navigation } from "./Navigation.tsx";
 
 export type PageContainerProps = {
   children: h.JSX.Element;
