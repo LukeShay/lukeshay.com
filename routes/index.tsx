@@ -2,7 +2,6 @@
 import { h } from "preact";
 import { tw } from "@twind";
 import { CakeIcon } from "~/components/heroicons/outline.tsx";
-
 import { PageContainer } from "~/components/PageContainer.tsx";
 import { List } from "~/components/list/List.tsx";
 import { ListItem } from "~/components/list/ListItem.tsx";
