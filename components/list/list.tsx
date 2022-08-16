@@ -1,10 +1,11 @@
-import type { FC, ReactNode } from 'react';
+/** @jsx h */
+import { h } from "preact";
 
 type ListProps = {
-  children: ReactNode;
+  children: h.JSX.Element;
 };
 
-const List: FC<ListProps> = ({ children }) => <div>{children}</div>;
+const List = ({ children }: ListProps) => <div>{children}</div>;
 
 export type { ListProps };
 export { List };
