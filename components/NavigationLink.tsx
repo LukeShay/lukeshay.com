@@ -6,6 +6,7 @@ import { ExternalLinkIcon } from "~/components/heroicons/outline.tsx";
 import { cn } from "@twind";
 
 type NavigationLinkProps = {
+  active?: boolean;
   children: h.JSX.Element | string;
   icon: h.JSX.Element | string;
   href: string;
@@ -13,12 +14,14 @@ type NavigationLinkProps = {
 };
 
 const NavigationLink = ({
+  active,
   children,
   href,
   icon,
   shortcut,
 }: NavigationLinkProps) => {
-  const ariaCurrent = undefined;
+  const ariaCurrent = active ? "page" : undefined;
+
   shortcut = undefined;
 
   // useEffect(() => {

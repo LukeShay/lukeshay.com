@@ -1,6 +1,7 @@
 /** @jsx h */
 import { h, VNode } from "preact";
 import { tw } from "@twind";
+import { PageProps } from "$fresh/server.ts";
 import { CakeIcon } from "~/components/heroicons/outline.tsx";
 import { PageContainer } from "~/components/PageContainer.tsx";
 import { List } from "~/components/list/List.tsx";
@@ -101,9 +102,9 @@ const timeLineItems = [
   },
 ];
 
-export default function Home() {
+export default function Home(props: PageProps) {
   return (
-    <PageContainer>
+    <PageContainer pageProps={props}>
       <div className={tw`mb-28`}>
         <div className={tw`pb-6 md:pb-12`}>
           <Gravatar className={tw`float-right`} />
