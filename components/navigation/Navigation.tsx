@@ -16,9 +16,7 @@ const Navigation = () => (
   <div
     className={tw`fixed bottom-0 -ml-2 w-full px-2 pb-2 md:static md:h-full md:w-72 md:py-6`}
   >
-    <h1
-      className={tw`hidden px-4 font-semibold text-slate-900 md:block`}
-    >
+    <h1 className={tw`hidden px-4 font-semibold text-slate-900 md:block`}>
       {"Luke Shay"}
     </h1>
     <nav className={tw`flex justify-between md:block md:space-y-1 md:py-4`}>
