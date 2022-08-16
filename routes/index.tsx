@@ -1,5 +1,5 @@
 /** @jsx h */
-import { h } from "preact";
+import { h, VNode } from "preact";
 import { tw } from "@twind";
 import { CakeIcon } from "~/components/heroicons/outline.tsx";
 import { PageContainer } from "~/components/PageContainer.tsx";
@@ -18,7 +18,7 @@ type TimeLineItemProps = {
   title: string;
   description: string;
   date: string;
-  icon: h.JSX.Element;
+  icon: VNode;
 };
 
 const TimeLineItem = ({
@@ -118,7 +118,9 @@ export default function Home() {
             </Link>
           </h2>
           <p className={tw`text-slate-600`}>
-            {"Building a scalable e-commerce platform for a large grocery store chain using Node.js, GraphQL, React, and Kubernetes."}
+            {
+              "Building a scalable e-commerce platform for a large grocery store chain using Node.js, GraphQL, React, and Kubernetes."
+            }
           </p>
         </div>
         <List>

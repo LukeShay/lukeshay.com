@@ -2,7 +2,7 @@
 import { h } from "preact";
 
 type ListProps = {
-  children: h.JSX.Element;
+  children: h.JSX.Element | h.JSX.Element[];
 };
 
 const List = ({ children }: ListProps) => <div>{children}</div>;
