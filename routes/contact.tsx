@@ -1,7 +1,7 @@
 /** @jsx h */
 import { h } from "preact";
-import { PageProps } from "$fresh/server.ts";
-import { PageContainer } from "../components/PageContainer.tsx";
+import { PageProps } from "fresh/server.ts";
+import { PageContainer } from "~/components/PageContainer.tsx";
 
 export default function ContactPage(props: PageProps) {
   return (

@@ -1,7 +1,7 @@
 /** @jsx h */
 import { h } from "preact";
-import { UnknownPageProps } from "$fresh/server.ts";
-import { PageContainer } from "../components/PageContainer.tsx";
+import { UnknownPageProps } from "fresh/server.ts";
+import { PageContainer } from "~/components/PageContainer.tsx";
 import { tw } from "@twind";
 
 export default function NotFoundPage(props: UnknownPageProps) {

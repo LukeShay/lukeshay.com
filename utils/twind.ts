@@ -1,4 +1,4 @@
-import { IS_BROWSER } from "$fresh/runtime.ts";
+import { IS_BROWSER } from "fresh/runtime.ts";
 import { Configuration, setup, tw } from "twind";
 
 export const cn = (...args: unknown[]): string =>

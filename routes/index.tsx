@@ -1,7 +1,7 @@
 /** @jsx h */
 import { h, VNode } from "preact";
 import { tw } from "@twind";
-import { PageProps } from "$fresh/server.ts";
+import { PageProps } from "fresh/server.ts";
 import { CakeIcon } from "~/components/heroicons/outline.tsx";
 import { PageContainer } from "~/components/PageContainer.tsx";
 import { List } from "~/components/list/List.tsx";

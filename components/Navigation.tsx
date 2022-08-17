@@ -11,7 +11,7 @@ import { GithubIcon } from "~/components/logos/GithubIcon.tsx";
 import { LinkedInIcon } from "~/components/logos/LinkedInIcon.tsx";
 
 import { NavigationLink } from "./NavigationLink.tsx";
-import { PageProps, UnknownPageProps } from "$fresh/server.ts";
+import { PageProps, UnknownPageProps } from "fresh/server.ts";
 
 export type NavigationProps = {
   pageProps: PageProps | UnknownPageProps;

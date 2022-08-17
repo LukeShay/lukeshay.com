@@ -1,11 +1,10 @@
 /** @jsx h */
 import { h } from "preact";
 import { tw } from "@twind";
-import { ExternalLinkIcon } from "~/components/heroicons/outline.tsx";
 import { List } from "~/components/list/List.tsx";
 import { ListItem } from "~/components/list/ListItem.tsx";
 import { Link } from "~/components/Link.tsx";
-import { Handlers, PageProps } from "$fresh/server.ts";
+import { Handlers, PageProps } from "fresh/server.ts";
 import { PageContainer } from "~/components/PageContainer.tsx";
 import {
   getPinnedRepositories,
@@ -44,16 +43,14 @@ export default function ProjectsPage(props: PageProps<PinnedRepository[]>) {
         </div>
         <List>
           {repos.map(({ id, nameWithOwner, description }) => (
-            <Link href={`https://github.com/${nameWithOwner}`} key={id}>
+            <Link href={`projects/${nameWithOwner}`} key={id}>
               <ListItem
                 className={tw`-mx-2 rounded-md px-2 hover:bg-slate-200`}
                 contentClassName={tw`flex justify-between`}
                 description={description}
                 title={nameWithOwner}
                 titleAs="h2"
-              >
-                <ExternalLinkIcon className={tw`h4 w-4 text-slate-500`} />
-              </ListItem>
+              />
             </Link>
           ))}
         </List>
