@@ -6,9 +6,11 @@
     "~/": "./",
     "fresh/": "https://deno.land/x/fresh@1.0.2/",
     "gfm": "https://deno.land/x/gfm@0.1.22/mod.ts",
+    "globby": "https://esm.sh/globby@13.1.2",
     "preact-render-to-string": "https://esm.sh/preact-render-to-string@5.2.1?external=preact",
     "preact": "https://esm.sh/preact@10.10.0",
     "preact/": "https://esm.sh/preact@10.10.0/",
+    "std/": "https://deno.land/std@0.152.0/",
     "twind": "https://esm.sh/twind@0.16.17",
     "twind/": "https://esm.sh/twind@0.16.17/"
   }
