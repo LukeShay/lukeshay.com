@@ -1,0 +1,7 @@
+{
+  "tasks": {
+    "start": "deno run -A --watch=static/,routes/ dev.ts",
+    "prod": "deno run --allow-net=0.0.0.0:8000 --allow-env --allow-read main.ts"
+  },
+  "importMap": "./import_map.json"
+}
