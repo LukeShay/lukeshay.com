@@ -5,22 +5,24 @@
 import * as $0 from "./routes/_404.tsx";
 import * as $1 from "./routes/_500.tsx";
 import * as $2 from "./routes/_app.tsx";
-import * as $3 from "./routes/contact.tsx";
-import * as $4 from "./routes/gfm.css.ts";
-import * as $5 from "./routes/index.tsx";
-import * as $6 from "./routes/projects.tsx";
-import * as $7 from "./routes/projects/[owner]/[repo].tsx";
+import * as $3 from "./routes/_middleware.tsx";
+import * as $4 from "./routes/contact.tsx";
+import * as $5 from "./routes/gfm.css.ts";
+import * as $6 from "./routes/index.tsx";
+import * as $7 from "./routes/projects.tsx";
+import * as $8 from "./routes/projects/[owner]/[repo].tsx";
 
 const manifest = {
   routes: {
     "./routes/_404.tsx": $0,
     "./routes/_500.tsx": $1,
     "./routes/_app.tsx": $2,
-    "./routes/contact.tsx": $3,
-    "./routes/gfm.css.ts": $4,
-    "./routes/index.tsx": $5,
-    "./routes/projects.tsx": $6,
-    "./routes/projects/[owner]/[repo].tsx": $7,
+    "./routes/_middleware.tsx": $3,
+    "./routes/contact.tsx": $4,
+    "./routes/gfm.css.ts": $5,
+    "./routes/index.tsx": $6,
+    "./routes/projects.tsx": $7,
+    "./routes/projects/[owner]/[repo].tsx": $8,
   },
   islands: {},
   baseUrl: import.meta.url,

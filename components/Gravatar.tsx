@@ -17,7 +17,7 @@ export const Gravatar = ({
     alt={alt ?? "Luke Shay"}
     className={tw`${String(className)} h-32 w-32 rounded-full`}
     height={height ?? 128}
-    src="https://www.gravatar.com/avatar/c57099d7997c3af5a04728e920d8e243.png?s=2048"
+    src="/images/gravatar.png"
     width={width ?? 128}
     {...props}
   />
