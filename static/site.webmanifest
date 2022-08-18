@@ -1,0 +1,9 @@
+{
+  "name": "Luke Shay",
+  "short_name": "Luke Shay",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "Scope": "/",
+  "start_url": "/"
+}
