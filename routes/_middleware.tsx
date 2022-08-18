@@ -1,7 +1,7 @@
 import { MiddlewareHandlerContext } from "fresh/server.ts";
 
 export function handler(req: Request, ctx: MiddlewareHandlerContext) {
-  if (req.url.includes("www")) {
+  if (req.url.includes("www.") || req.url.includes("fresh.")) {
     return ctx.next();
   }
 
