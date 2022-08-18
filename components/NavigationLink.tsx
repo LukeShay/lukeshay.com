@@ -60,24 +60,26 @@ const NavigationLink = ({
 
   const className = cn(
     "block items-center rounded-md py-1.5 px-4 text-sm text-slate-700 duration-200 ease-in-out hover:bg-slate-100 mb-0.5",
-    ariaCurrent === "page" && "bg-slate-100"
+    ariaCurrent === "page" && "bg-slate-100",
   );
 
-  return external ? (
-    <a
-      aria-current={ariaCurrent}
-      className={className}
-      href={href}
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      {content}
-    </a>
-  ) : (
-    <a aria-current={ariaCurrent} className={className} href={href}>
-      {content}
-    </a>
-  );
+  return external
+    ? (
+      <a
+        aria-current={ariaCurrent}
+        className={className}
+        href={href}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        {content}
+      </a>
+    )
+    : (
+      <a aria-current={ariaCurrent} className={className} href={href}>
+        {content}
+      </a>
+    );
 };
 
 export type { NavigationLinkProps };

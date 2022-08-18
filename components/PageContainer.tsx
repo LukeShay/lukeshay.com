@@ -40,7 +40,7 @@ export function PageContainer(props: PageContainerProps) {
               <div
                 className={cn(
                   "mx-auto mt-6 w-full px-2 md:mt-12 lg:mt-24",
-                  wide ? "max-w-4xl" : "max-w-2xl"
+                  wide ? "max-w-4xl" : "max-w-2xl",
                 )}
               >
                 {children}

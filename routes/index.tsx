@@ -119,9 +119,7 @@ export default function Home(props: PageProps) {
             </Link>
           </h2>
           <p className={tw`text-slate-600`}>
-            {
-              "Building a scalable e-commerce platform for a large grocery store chain using Node.js, GraphQL, React, and Kubernetes."
-            }
+            {"Building a scalable e-commerce platform for a large grocery store chain using Node.js, GraphQL, React, and Kubernetes."}
           </p>
         </div>
         <List>

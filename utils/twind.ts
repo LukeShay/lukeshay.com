@@ -22,6 +22,7 @@ export const config: Configuration = {
         800: "#1e293b",
         900: "#0f172a",
       },
+      white: "#ffffff",
     },
   },
 };

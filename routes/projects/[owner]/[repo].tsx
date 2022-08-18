@@ -16,7 +16,7 @@ export const handler: Handlers<HandlerResponse> = {
     const { owner, repo } = ctx.params;
 
     const resp = await fetch(
-      `https://raw.githubusercontent.com/${owner}/${repo}/main/README.md`
+      `https://raw.githubusercontent.com/${owner}/${repo}/main/README.md`,
     );
     const source = await resp.text();
 
@@ -32,12 +32,19 @@ export default function RepositoryPage(props: PageProps<HandlerResponse>) {
 
   return (
     <PageContainer pageProps={props} wide>
-      <Link href={`https://github.com/${owner}/${repo}`} className={tw`flex row`}>
-        <h1 className={tw`px-4 lg:px-12 pb-8 text-4xl font-bold`}>
+      <div className={tw`flex flex-row justify-between pb-8 px-4 lg:px-12`}>
+        <h1 className={tw`text-4xl font-bold`}>
           {`${owner}/${repo}`}
         </h1>
-        <ExternalLinkIcon className={tw`h4 w-4 text-slate-500`} />
-      </Link>
+        <Link href={`https://github.com/${owner}/${repo}`}>
+          <div
+            className={tw`sm:flex flex-row px-4 py-2 rounded bg-white w-32 justify-between hidden`}
+          >
+            <span>{"Visit Repo"}</span>
+            <ExternalLinkIcon className={tw`h4 w-4 text-slate-500`} />
+          </div>
+        </Link>
+      </div>
       <Markdown source={source} baseUrl={`/projects/${owner}/${repo}`} />
     </PageContainer>
   );

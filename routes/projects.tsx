@@ -10,6 +10,7 @@ import {
   getPinnedRepositories,
   PinnedRepository,
 } from "~/lib/server/repositories/github-repository.ts";
+import { ArrowRightIcon } from "../components/heroicons/outline.tsx";
 
 export const handler: Handlers<PinnedRepository[]> = {
   async GET(_, ctx) {
@@ -36,9 +37,7 @@ export default function ProjectsPage(props: PageProps<PinnedRepository[]>) {
         <div className={tw`pb-12`}>
           <h1 className={tw`pb-6 text-4xl font-bold`}>{"My Projects"}</h1>
           <p className={tw`text-slate-600`}>
-            {
-              "The following is a list of open source projects I have worked on that showcase my skills and experience. The source code for the projects can be found by clicking on the link."
-            }
+            {"The following is a list of open source projects I have worked on that showcase my skills and experience. The source code for the projects can be found by clicking on the link."}
           </p>
         </div>
         <List>
@@ -50,7 +49,9 @@ export default function ProjectsPage(props: PageProps<PinnedRepository[]>) {
                 description={description}
                 title={nameWithOwner}
                 titleAs="h2"
-              />
+              >
+                <ArrowRightIcon className={tw`h6 w-6 text-slate-500`} />
+              </ListItem>
             </Link>
           ))}
         </List>

@@ -15,7 +15,9 @@ export function Markdown({ source, baseUrl }: MarkdownProps) {
 
   return (
     <div
-      className={`markdown-body ${tw("px-4 py-4 lg:px-12 lg:py-10 rounded-md mb-0 md:mb-8")}`}
+      className={`markdown-body ${
+        tw("px-4 py-4 lg:px-12 lg:py-10 rounded-md mb-0 md:mb-8")
+      }`}
       dangerouslySetInnerHTML={{ __html: html }}
     />
   );
