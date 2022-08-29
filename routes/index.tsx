@@ -7,6 +7,7 @@ import { PageContainer } from "~/components/PageContainer.tsx";
 import { List } from "~/components/list/List.tsx";
 import { ListItem } from "~/components/list/ListItem.tsx";
 import { HyVeeIcon } from "~/components/logos/HyVeeIcon.tsx";
+import { AwsIcon } from "~/components/logos/AwsIcon.tsx";
 import { IowaStateIcon } from "~/components/logos/IowaStateIcon.tsx";
 import { MaverickSoftwareConsultingIcon } from "~/components/logos/MaverickSoftwareConsultingIcon.tsx";
 import { RainAndHailIcon } from "~/components/logos/RainAndHailIcon.tsx";
@@ -39,6 +40,12 @@ const TimeLineItem = ({
 );
 
 const timeLineItems = [
+  {
+    date: "Aug 2022",
+    description: "Software Engineer doing fullstack development",
+    icon: AwsIcon,
+    title: "Started Job at Amazon Web Services",
+  },
   {
     date: "Dec 2021",
     description:
