@@ -12,6 +12,7 @@
     "preact/": "https://esm.sh/preact@10.10.0/",
     "std/": "https://deno.land/std@0.152.0/",
     "twind": "https://esm.sh/twind@0.16.17",
-    "twind/": "https://esm.sh/twind@0.16.17/"
+    "twind/": "https://esm.sh/twind@0.16.17/",
+    "lshay/": "https://deno.land/x/lshay@0.1.0/"
   }
 }
