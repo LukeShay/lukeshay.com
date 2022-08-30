@@ -42,7 +42,7 @@ const TimeLineItem = ({
 const timeLineItems = [
   {
     date: "Aug 2022",
-    description: "Software Engineer doing fullstack development",
+    description: "Software Development Engineer doing fullstack development",
     icon: AwsIcon,
     title: "Started Job at Amazon Web Services",
   },
