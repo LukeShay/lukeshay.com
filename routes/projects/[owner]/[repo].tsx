@@ -38,8 +38,7 @@ export default function RepositoryPage(props: PageProps<HandlerResponse>) {
         </h1>
         <Link href={`https://github.com/${owner}/${repo}`}>
           <div
-            className={tw
-              `sm:flex flex-row px-4 py-2 rounded bg-white w-32 justify-between hidden`}
+            className={tw`sm:flex flex-row px-4 py-2 rounded bg-white w-32 justify-between hidden`}
           >
             <span>{"Visit Repo"}</span>
             <ExternalLinkIcon className={tw`h4 w-4 text-slate-500`} />

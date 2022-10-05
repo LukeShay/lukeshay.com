@@ -24,8 +24,7 @@ function Navigation(props: NavigationProps) {
 
   return (
     <div
-      className={tw
-        `fixed bottom-0 -ml-2 w-full px-2 pb-2 md:static md:h-full md:w-72 md:py-6`}
+      className={tw`fixed bottom-0 -ml-2 w-full px-2 pb-2 md:static md:h-full md:w-72 md:py-6`}
     >
       <h1 className={tw`hidden px-4 font-semibold text-slate-900 md:block`}>
         {"Luke Shay"}

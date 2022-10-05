@@ -43,8 +43,7 @@ const NavigationLink = ({
       </div>
       {shortcut && !external && (
         <div
-          className={tw
-            `hidden h-5 w-5 items-center justify-center rounded bg-slate-300 text-xs md:flex`}
+          className={tw`hidden h-5 w-5 items-center justify-center rounded bg-slate-300 text-xs md:flex`}
         >
           <p className={tw`text-slate-500`}>{shortcut}</p>
         </div>
