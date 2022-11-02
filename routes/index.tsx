@@ -117,7 +117,7 @@ export default function Home(props: PageProps) {
           <Gravatar className={tw`float-right`} />
           <h1 className={tw`pb-2 text-4xl font-bold`}>{"Luke Shay"}</h1>
           <h2 className={tw`pb-4`}>
-            {"Software Development Engineer II at "}
+            {"Software Development Engineer at "}
             <Link
               className={tw`font-bold underline`}
               href="https://aws.amazon.com/"
