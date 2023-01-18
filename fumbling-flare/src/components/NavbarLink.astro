@@ -1,0 +1,21 @@
+---
+import { clsx } from "clsx";
+
+export interface Props {
+  href: string;
+}
+
+const { href } = Astro.props;
+
+const className = clsx(
+  "px-3 py-2 hover:text-cyan-400 block",
+  Astro.url.href.startsWith(href) ||
+    (Astro.url.pathname === href && "text-cyan-400")
+);
+---
+
+<li>
+  <a class={className} href={href}>
+    <slot />
+  </a>
+</li>

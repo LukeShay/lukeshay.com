@@ -1,0 +1,17 @@
+---
+import NavbarLink from "./NavbarLink.astro";
+---
+
+<nav
+  role="navigation"
+  class="sticky pointer-events-auto hidden md:flex items-center top-2 pr-4"
+>
+  <ul
+    class="flex border dark:border-slate-800 dark:shadow-slate-900 dark:bg-slate-900 dark:text-slate-300 border-slate-900/5 font-medium shadow-slate-800/5 shadow-lg text-sm text-slate-800 w-fit rounded-full px-2 mx-auto bg-white bg-opacity-95"
+  >
+    <NavbarLink href="/">Home</NavbarLink>
+    <NavbarLink href="/projects">Projects</NavbarLink>
+    <NavbarLink href="/contact">Contact</NavbarLink>
+  </ul>
+  <slot />
+</nav>
