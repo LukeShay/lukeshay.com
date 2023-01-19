@@ -1,5 +1,3 @@
-import { graphql } from "@octokit/graphql";
-
 export type PinnedRepository = {
 	id: string;
 	nameWithOwner: string;
@@ -7,20 +5,11 @@ export type PinnedRepository = {
 };
 
 export async function getPinnedRepositories() {
-	const octokit = graphql.defaults({
-		headers: {
-			authorization: `token ${import.meta.env.GITHUB_API_TOKEN ?? ""}`,
-		},
-	});
-
-	const result: {
-		viewer: {
-			pinnedItems: {
-				nodes: PinnedRepository[];
-			};
-		};
-	} = await octokit(`{
-      viewer { 
+	const resp = await fetch("https://api.github.com/graphql", {
+		method: "POST",
+		body: JSON.stringify({
+			query: `query {
+				viewer { 
           pinnedItems(first: 6, types: [REPOSITORY]) {
               nodes {
                   __typename
@@ -32,7 +21,22 @@ export async function getPinnedRepositories() {
               }
           }
       }
-  }`);
+			}`,
+		}),
+		headers: {
+			Authorization: `bearer ${import.meta.env.GITHUB_API_TOKEN}`,
+		},
+	});
+
+	console.log(await resp.text());
+
+	const result: {
+		viewer: {
+			pinnedItems: {
+				nodes: PinnedRepository[];
+			};
+		};
+	} = await resp.json();
 
 	return result.viewer.pinnedItems.nodes;
 }
