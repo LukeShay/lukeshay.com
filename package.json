@@ -29,7 +29,7 @@
 	},
 	"prettier": "@lshay/prettier-config",
 	"engines": {
-		"node": ">=17",
+		"node": "16.x || 18.x",
 		"pnpm": "7.x"
 	}
 }
