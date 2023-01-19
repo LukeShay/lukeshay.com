@@ -1,0 +1,35 @@
+---
+export interface Props {
+  title: string;
+  subtitle?: string;
+  description?: string;
+  class?: string;
+}
+
+const { title, subtitle, description } = Astro.props;
+
+const hasSubtitle = Astro.slots.has("subtitle") || subtitle;
+const hasDescription = Astro.slots.has("description") || description;
+---
+
+<section title={title} class={Astro.props.class}>
+  <h1 class="pb-2 text-5xl font-extrabold">{title}</h1>
+  {
+    hasSubtitle && (
+      <h2 class="pb-6">
+        {Astro.slots.has("subtitle") ? <slot name="subtitle" /> : subtitle}
+      </h2>
+    )
+  }
+  {
+    hasDescription && (
+      <h3 class="text-slate-700 dark:text-slate-400">
+        {Astro.slots.has("description") ? (
+          <slot name="description" />
+        ) : (
+          description
+        )}
+      </h3>
+    )
+  }
+</section>

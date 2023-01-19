@@ -1,0 +1,34 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Gravatar from "@components/Gravatar.astro";
+import List from "@components/List.astro";
+import ListItem from "@components/ListItem.astro";
+import Hero from "@components/Hero.astro";
+import { getPinnedRepositories } from "@server/repositories/github-repository.js";
+
+const projects = await getPinnedRepositories();
+---
+
+<Layout title="Luke Shay | Projects">
+	<main>
+		<section title="Information" class="mb-12 dark:text-slate-100">
+			<Gravatar
+				class="md:float-right md:w-32 md:h-auto w-24 h-auto mb-6 md:mb-0 rounded-full ring-1 ring-slate-800/5 shadow-lg shadow-slate-800/5"
+			/>
+			<Hero
+				title="My Projects"
+				subtitle="A list of my pinned projects on GitHub."
+				description="Click on the projects to open them in GitHub."
+			/>
+		</section>
+		<section title="Projects">
+			<List>
+				{
+					projects.map(({ description, nameWithOwner }) => (
+						<ListItem title={nameWithOwner} subtitle={description} href={`https://github.com/${nameWithOwner}`} />
+					))
+				}
+			</List>
+		</section>
+	</main>
+</Layout>
