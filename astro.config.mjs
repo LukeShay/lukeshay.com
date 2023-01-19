@@ -16,6 +16,5 @@ export default defineConfig({
 		}),
 	],
 	output: "server",
-	site: "https://www.lukeshay.com",
 	adapter: cloudflare({ mode: "directory" }),
 });
