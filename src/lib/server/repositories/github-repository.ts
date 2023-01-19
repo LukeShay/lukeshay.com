@@ -28,15 +28,15 @@ export async function getPinnedRepositories() {
 		},
 	});
 
-	console.log(await resp.text());
-
 	const result: {
-		viewer: {
-			pinnedItems: {
-				nodes: PinnedRepository[];
+		data: {
+			viewer: {
+				pinnedItems: {
+					nodes: PinnedRepository[];
+				};
 			};
 		};
 	} = await resp.json();
 
-	return result.viewer.pinnedItems.nodes;
+	return result.data.viewer.pinnedItems.nodes;
 }
