@@ -25,7 +25,7 @@ export async function getPinnedRepositories() {
 			}`,
 			}),
 			headers: {
-				Authorization: `bearer ${import.meta.env.GITHUB_API_TOKEN}`,
+				Authorization: `token ${process.env.GITHUB_API_TOKEN}`,
 			},
 		});
 
