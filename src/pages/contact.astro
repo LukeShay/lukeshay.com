@@ -13,10 +13,11 @@ import Layout from "@layouts/Layout.astro";
 			/>
 			<Hero title="Contact" subtitle="Enter your information and I will get back to you." />
 		</section>
-		<form class="space-y-4" name="contact" method="post">
-			<input type="hidden" name="form-name" value="contact" />
+		<form class="space-y-4" name="contact-form" method="post">
+			<input type="hidden" name="form-name" value="contact-form" />
 			<Input label="Name" name="full-name" required type="text" />
 			<Input label="Email" name="email" required type="email" placeholder="email@placeholder.com" />
+			<Input label="Linkedin" name="linkedin" required type="url" placeholder="https://www.linkedin.com/in/luke-shay/" />
 			<Input label="Reason" name="reason" required type="textarea" rows={4} />
 			<button
 				type="submit"
