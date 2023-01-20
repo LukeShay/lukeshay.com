@@ -39,6 +39,8 @@ export async function getPinnedRepositories() {
 			};
 		} = await resp.json();
 
+		console.log("Pinned repositories result:", JSON.stringify(result));
+
 		return result.data.viewer.pinnedItems.nodes;
 	} catch (error) {
 		const e = error as Error;
