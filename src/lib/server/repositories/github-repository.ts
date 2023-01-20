@@ -29,6 +29,8 @@ export async function getPinnedRepositories() {
 			},
 		});
 
+		console.log("token:", process.env.GITHUB_API_TOKEN, import.meta.env.GITHUB_API_TOKEN);
+
 		const result: {
 			data: {
 				viewer: {
