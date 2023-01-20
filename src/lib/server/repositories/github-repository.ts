@@ -1,3 +1,5 @@
+import { getEnvVar } from "@server/utils/env-utils";
+
 export type PinnedRepository = {
 	id: string;
 	nameWithOwner: string;
@@ -25,11 +27,11 @@ export async function getPinnedRepositories() {
 			}`,
 			}),
 			headers: {
-				Authorization: `token ${process.env.GITHUB_API_TOKEN}`,
+				Authorization: `token ${getEnvVar("GITHUB_API_TOKEN")}`,
 			},
 		});
 
-		console.log("token:", process.env.GITHUB_API_TOKEN, import.meta.env.GITHUB_API_TOKEN);
+		console.log("token:", getEnvVar("GITHUB_API_TOKEN"));
 
 		const result: {
 			data: {
