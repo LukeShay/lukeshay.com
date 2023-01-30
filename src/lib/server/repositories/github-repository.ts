@@ -6,7 +6,7 @@ export type PinnedRepository = {
 	description: string;
 };
 
-export async function getPinnedRepositories() {
+export const getPinnedRepositories = async () => {
 	try {
 		const resp = await fetch("https://api.github.com/graphql", {
 			method: "POST",
@@ -31,8 +31,6 @@ export async function getPinnedRepositories() {
 			},
 		});
 
-		console.log("token:", getEnvVar("GITHUB_API_TOKEN"));
-
 		const result: {
 			data: {
 				viewer: {
@@ -55,4 +53,4 @@ export async function getPinnedRepositories() {
 
 		throw error;
 	}
-}
+};
