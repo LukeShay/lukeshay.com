@@ -16,7 +16,7 @@ const hasDescription = Astro.slots.has("description") || description;
   <h1 class="pb-2 text-5xl font-extrabold text-black dark:text-slate-100">{title}</h1>
   {
     hasSubtitle && (
-      <h2 class="pb-6 text-black dark:text-slate-100">
+      <h2 class="pb-4 text-black dark:text-slate-100">
         {Astro.slots.has("subtitle") ? <slot name="subtitle" /> : subtitle}
       </h2>
     )
