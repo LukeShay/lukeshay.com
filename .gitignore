@@ -21,3 +21,4 @@ pnpm-debug.log*
 functions/[[path]].js
 .envrc
 .netlify
+.idea

@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 export type ExcludedProps = "name" | "class" | "aria-describedby" | "aria-invalid";
 
-export type Props = Omit<astroHTML.JSX.InputHTMLAttributes, ExcludedProps> & {
+export type Props = Omit<astroHTML.JSX.TextareaHTMLAttributes, ExcludedProps> & {
 	name: string;
 	label: string;
 	helpText?: string;
@@ -27,7 +27,7 @@ const helpTextClassName = clsx("mt-2 text-sm", errorText ? "text-red-500" : "tex
 		{label}{required && <span class="ml-1 text-red-500">*</span>}
 	</label>
 	<div class={inputDivClassName}>
-		<input
+		<textarea
 			id={name}
 			name={name}
 			class={inputClassName}

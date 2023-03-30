@@ -1,5 +1,6 @@
 ---
 import Input from "@components/form/Input.astro";
+import Textarea from "@components/form/Textarea.astro";
 import Hero from "@components/Hero.astro";
 import Layout from "@layouts/Layout.astro";
 ---
@@ -25,7 +26,7 @@ import Layout from "@layouts/Layout.astro";
 				type="url"
 				placeholder="https://www.linkedin.com/in/luke-shay/"
 			/>
-			<Input label="Reason" name="reason" required type="textarea" rows={4} />
+			<Textarea label="Reason" name="reason" required type="textarea" rows={4} />
 			<div data-netlify-recaptcha="true"></div>
 			<button
 				type="submit"
