@@ -1,7 +1,10 @@
 [build]
-  command = "pnpm run build"
+  command = "./.scripts/build.sh"
   functions = "netlify/functions"
   publish = "dist"
+
+[build.environment]
+  NPM_FLAGS = "--version"
 
 [functions]
   node_bundler = "esbuild"
@@ -11,3 +14,4 @@
   to = "/.netlify/functions/:splat" # all function calls will go to this path
   status = 200 # ok code
   force = true # ensure to always redirect
+
