@@ -9,29 +9,28 @@
 		"build": "astro build",
 		"preview": "astro preview",
 		"astro": "astro",
-		"prettier": "prettier --ignore-path .gitignore --check .",
-		"prettier:fix": "pnpm prettier --write"
+		"format": "prettier --check --write . src/**/*.astro"
 	},
 	"dependencies": {
-		"@fontsource/inter": "4.5.15",
-		"@fortawesome/fontawesome-free": "6.4.0",
-		"astro": "2.1.8",
-		"cache-parser": "1.2.4",
-		"clsx": "1.2.1"
+		"@fontsource/inter": "^5.0.8",
+		"@fortawesome/fontawesome-free": "^6.4.2",
+		"astro": "^3.1.4",
+		"cache-parser": "^1.2.4",
+		"prettier-plugin-astro": "^0.12.0",
+		"tailwind-merge": "^1.14.0"
 	},
 	"devDependencies": {
-		"@astrojs/cloudflare": "6.2.2",
-		"@astrojs/netlify": "2.2.0",
-		"@astrojs/sitemap": "1.2.1",
-		"@astrojs/tailwind": "3.1.1",
-		"@lshay/prettier-config": "0.5.5",
-		"@tailwindcss/forms": "0.5.3",
-		"prettier": "2.8.7",
-		"prettier-plugin-astro": "0.8.0",
-		"tailwindcss": "3.3.0"
+		"@astrojs/cloudflare": "^7.3.0",
+		"@astrojs/netlify": "^3.0.2",
+		"@astrojs/tailwind": "^5.0.0",
+		"@lshay/prettier-config": "^0.6.1",
+		"@tailwindcss/forms": "^0.5.6",
+		"prettier": "^3.0.3",
+		"prettier-plugin-packagejson": "^2.4.5",
+		"prettier-plugin-tailwindcss": "^0.5.4",
+		"tailwindcss": "^3.3.3"
 	},
 	"engines": {
-		"node": "16.x || 18.x",
-		"pnpm": "7.x"
+		"node": "18.x"
 	}
 }

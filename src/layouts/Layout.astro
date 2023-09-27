@@ -1,16 +1,16 @@
 ---
-import "@fontsource/inter/variable-full.css";
+import "@fontsource/inter/index.css"
 
-import MobileNav from "@components/MobileNav.astro";
-import Navbar from "@components/Navbar.astro";
-import ThemeToggle from "@components/ThemeToggle.astro";
-import { setCacheControl } from "@server/utils/response-util.js";
+import MobileNav from "@components/MobileNav.astro"
+import Navbar from "@components/Navbar.astro"
+import ThemeToggle from "@components/ThemeToggle.astro"
+import { setCacheControl } from "@server/utils/response-util.js"
 
 export interface Props {
-	title: string;
+	title: string
 }
 
-const { title } = Astro.props;
+const { title } = Astro.props
 
 setCacheControl(Astro, {
 	maxAge: 604800,
@@ -20,10 +20,10 @@ setCacheControl(Astro, {
 	sMaxAge: 604800,
 	staleIfError: 86400,
 	staleWhileRevalidate: 86400,
-});
+})
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -41,13 +41,16 @@ setCacheControl(Astro, {
 			property="og:description"
 			content="Software Development Engineer at Amazon Web Services that enjoys building cutting-edge web apps with new technologies."
 		/>
-		<meta property="og:image" content="https://www.gravatar.com/avatar/c57099d7997c3af5a04728e920d8e243.png?s=2048" />
+		<meta
+			property="og:image"
+			content="https://www.gravatar.com/avatar/c57099d7997c3af5a04728e920d8e243.png?s=2048"
+		/>
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://www.lukeshay.com/" />
 		<meta name="robots" content="index, follow" />
 		<meta
 			name="keywords"
-			content="Luke Shay, Software, Software Engineer, Development, JavaScript, TypeScript, Deno, AWS, Amazon Web Services, GCP, Google Cloud Platform"
+			content="Luke Shay, Software, Software Engineer, Development, JavaScript, TypeScript, Deno, Bun, AWS, Amazon Web Services, GCP, Google Cloud Platform"
 		/>
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
@@ -55,7 +58,9 @@ setCacheControl(Astro, {
 	</head>
 	<body>
 		<div class="bg-slate-100 dark:bg-slate-900/[0.98]">
-			<div class="max-w-6xl w-full pt-6 pb-16 bg-white dark:bg-slate-900 mx-auto min-h-screen">
+			<div
+				class="max-w-6xl w-full pt-6 pb-16 bg-white dark:bg-slate-900 mx-auto min-h-screen"
+			>
 				<Navbar>
 					<ThemeToggle />
 				</Navbar>
@@ -72,8 +77,8 @@ setCacheControl(Astro, {
 
 <script>
 	if (localStorage.getItem("theme") === "dark") {
-		document.body.classList.add("dark");
+		document.body.classList.add("dark")
 	} else {
-		document.body.classList.add("remove");
+		document.body.classList.add("remove")
 	}
 </script>

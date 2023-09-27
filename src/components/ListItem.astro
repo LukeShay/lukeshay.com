@@ -1,67 +1,67 @@
 ---
 export interface Props {
-  src?: string;
-  alt?: string;
-  title: string;
-  subtitle: string;
-  date?: string;
-  href?: string;
+	src?: string
+	alt?: string
+	title: string
+	subtitle: string
+	date?: string
+	href?: string
 }
 
-const { src, alt, title, subtitle, date, href } = Astro.props;
+const { src, alt, title, subtitle, date, href } = Astro.props
 
-const external = href && href.startsWith("http");
+const external = href && href.startsWith("http")
 
 const linkProps = href
-  ? {
-      href,
-      target: external ? "_blank" : undefined,
-      rel: external ? "noopener noreferrer" : undefined,
-      class: "group w-full",
-    }
-  : {};
+	? {
+			class: "group w-full cursor-pointer",
+			href,
+			rel: external ? "noopener noreferrer" : undefined,
+			target: external ? "_blank" : undefined,
+	  }
+	: {}
 
-const Wrapper = href ? "a" : Fragment;
+const Wrapper = href ? "a" : Fragment
 ---
 
 <li class="flex items-center">
-  <Wrapper {...linkProps}>
-    {
-      src && (
-        <div class="pr-4">
-          <div class="h-6 w-6">
-            <img height="24" width="24" alt={alt} src={src} />
-          </div>
-        </div>
-      )
-    }
-    {
-      Astro.slots.has("default") && (
-        <div class="pr-4 text-slate-900 dark:text-slate-100 group-hover:text-cyan-400">
-          <slot />
-        </div>
-      )
-    }
-    <div
-      class="flex justify-between w-full items-center border-b border-slate-200 dark:border-slate-800 py-5"
-    >
-      <div>
-        <h3 class="dark:text-slate-100 group-hover:text-cyan-400">
-          {title}
-        </h3>
-        <p
-          class="text-sm text-slate-700 dark:text-slate-400 group-hover:text-cyan-400"
-        >
-          {subtitle}
-        </p>
-      </div>
-      {
-        date && (
-          <p class="w-32 text-right text-sm text-slate-700 dark:text-slate-400 md:w-24">
-            {date}
-          </p>
-        )
-      }
-    </div>
-  </Wrapper>
+	<Wrapper {...linkProps}>
+		{
+			src && (
+				<div class="pr-4">
+					<div class="h-6 w-6">
+						<img height="24" width="24" alt={alt} src={src} />
+					</div>
+				</div>
+			)
+		}
+		{
+			Astro.slots.has("default") && (
+				<div class="pr-4 text-slate-900 dark:text-slate-100 group-hover:text-cyan-400">
+					<slot />
+				</div>
+			)
+		}
+		<div
+			class="flex justify-between w-full items-center border-b border-slate-200 dark:border-slate-800 py-5"
+		>
+			<div>
+				<h3 class="dark:text-slate-100 group-hover:text-cyan-400">
+					{title}
+				</h3>
+				<p
+					class="text-sm text-slate-700 dark:text-slate-400 group-hover:text-cyan-400"
+				>
+					{subtitle}
+				</p>
+			</div>
+			{
+				date && (
+					<p class="w-32 text-right text-sm text-slate-700 dark:text-slate-400 md:w-24">
+						{date}
+					</p>
+				)
+			}
+		</div>
+	</Wrapper>
 </li>

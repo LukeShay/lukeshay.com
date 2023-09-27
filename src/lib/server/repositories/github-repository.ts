@@ -1,10 +1,10 @@
-import { getEnvVar } from "@server/utils/env-utils";
+import { getEnvVar } from "@server/utils/env-utils"
 
 export type PinnedRepository = {
-	id: string;
-	nameWithOwner: string;
-	description: string;
-};
+	id: string
+	nameWithOwner: string
+	description: string
+}
 
 export const getPinnedRepositories = async () => {
 	try {
@@ -29,28 +29,28 @@ export const getPinnedRepositories = async () => {
 			headers: {
 				Authorization: `token ${getEnvVar("GITHUB_API_TOKEN")}`,
 			},
-		});
+		})
 
 		const result: {
 			data: {
 				viewer: {
 					pinnedItems: {
-						nodes: PinnedRepository[];
-					};
-				};
-			};
-		} = await resp.json();
+						nodes: PinnedRepository[]
+					}
+				}
+			}
+		} = await resp.json()
 
-		console.log("Pinned repositories result:", JSON.stringify(result));
+		console.log("Pinned repositories result:", JSON.stringify(result))
 
-		return result.data.viewer.pinnedItems.nodes;
+		return result.data.viewer.pinnedItems.nodes
 	} catch (error) {
-		const e = error as Error;
+		const e = error as Error
 
-		console.error(e.name);
-		console.error(e.message);
-		console.error(e.stack);
+		console.error(e.name)
+		console.error(e.message)
+		console.error(e.stack)
 
-		throw error;
+		throw error
 	}
-};
+}

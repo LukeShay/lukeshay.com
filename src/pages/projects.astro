@@ -1,11 +1,11 @@
 ---
-import Layout from "@layouts/Layout.astro";
-import List from "@components/List.astro";
-import ListItem from "@components/ListItem.astro";
-import Hero from "@components/Hero.astro";
-import { getPinnedRepositories } from "@server/repositories/github-repository.js";
+import Layout from "@layouts/Layout.astro"
+import List from "@components/List.astro"
+import ListItem from "@components/ListItem.astro"
+import Hero from "@components/Hero.astro"
+import { getPinnedRepositories } from "@server/repositories/github-repository.js"
 
-const projects = await getPinnedRepositories();
+const projects = await getPinnedRepositories()
 ---
 
 <Layout title="Luke Shay | Projects">
@@ -21,7 +21,11 @@ const projects = await getPinnedRepositories();
 			<List>
 				{
 					projects.map(({ description, nameWithOwner }) => (
-						<ListItem title={nameWithOwner} subtitle={description} href={`https://github.com/${nameWithOwner}`} />
+						<ListItem
+							title={nameWithOwner}
+							subtitle={description}
+							href={`https://github.com/${nameWithOwner}`}
+						/>
 					))
 				}
 			</List>

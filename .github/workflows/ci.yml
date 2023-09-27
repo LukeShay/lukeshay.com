@@ -1,26 +1,26 @@
 name: CI
 
 on:
-    pull_request:
-    push:
-        branches:
-            - main
+  pull_request:
+  push:
+    branches:
+      - main
 
 jobs:
-    check:
-        runs-on: ubuntu-22.04
-        name: ${{ matrix.cmd }}
-        strategy:
-            fail-fast: false
-            matrix:
-                cmd:
-                    - build
-                    - prettier
-        steps:
-            - uses: actions/checkout@v3
-            - uses: actions/setup-node@v3
-              with:
-                  node-version: 18
-                  cache: pnpm
-            - run: pnpm install --frozen-lockfile --no-color
-            - run: pnpm ${{ matrix.cmd }}
+  check:
+    runs-on: ubuntu-22.04
+    name: ${{ matrix.cmd }}
+    strategy:
+      fail-fast: false
+      matrix:
+        cmd:
+          - build
+          - prettier
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile --no-color
+      - run: pnpm ${{ matrix.cmd }}

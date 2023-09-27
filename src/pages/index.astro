@@ -1,14 +1,14 @@
 ---
-import Layout from "@layouts/Layout.astro";
-import Gravatar from "@components/Gravatar.astro";
-import List from "@components/List.astro";
-import ListItem from "@components/ListItem.astro";
-import Home from "@components/icons/Home.astro";
-import AcademicCap from "@components/icons/AcademicCap.astro";
-import Cake from "@components/icons/Cake.astro";
-import Hero from "@components/Hero.astro";
-import LinkedIn from "@components/icons/LinkedIn.astro";
-import SquareGitHub from "@components/icons/SquareGitHub.astro";
+import Layout from "@layouts/Layout.astro"
+import Gravatar from "@components/Gravatar.astro"
+import List from "@components/List.astro"
+import ListItem from "@components/ListItem.astro"
+import Home from "@components/icons/Home.astro"
+import AcademicCap from "@components/icons/AcademicCap.astro"
+import Cake from "@components/icons/Cake.astro"
+import Hero from "@components/Hero.astro"
+import LinkedIn from "@components/icons/LinkedIn.astro"
+import SquareGitHub from "@components/icons/SquareGitHub.astro"
 ---
 
 <Layout title="Luke Shay">
@@ -19,7 +19,10 @@ import SquareGitHub from "@components/icons/SquareGitHub.astro";
 					class="md:w-32 md:h-auto w-24 h-auto mb-6 md:mb-0 rounded-full ring-1 ring-slate-800/5 shadow-lg shadow-slate-800/5"
 				/>
 			</div>
-			<Hero title="Luke Shay" description="Building a platform for AWS Solution Architects collaborate.">
+			<Hero
+				title="Luke Shay"
+				description="Building a platform for AWS Solution Architects collaborate."
+			>
 				<div slot="subtitle">
 					Software Development Engineer at <a
 						class="font-bold underline"
@@ -38,10 +41,19 @@ import SquareGitHub from "@components/icons/SquareGitHub.astro";
 					target="_blank"
 					href="https://www.linkedin.com/in/luke-shay/"
 				>
-					<LinkedIn class="w-8 h-8 pr-2" /><span class="text-slate-700 dark:text-slate-400">LinkedIn</span>
+					<LinkedIn class="w-8 h-8 pr-2" /><span
+						class="text-slate-700 dark:text-slate-400">LinkedIn</span
+					>
 				</a>
-				<a class="flex items-center font-semibold pl-8" rel="noreferrer" target="_blank" href="https://github.com/lukeshay">
-					<SquareGitHub class="w-8 h-8 pr-2" /><span class="text-slate-700 dark:text-slate-400">GitHub</span>
+				<a
+					class="flex items-center font-semibold pl-8"
+					rel="noreferrer"
+					target="_blank"
+					href="https://github.com/lukeshay"
+				>
+					<SquareGitHub class="w-8 h-8 pr-2" /><span
+						class="text-slate-700 dark:text-slate-400">GitHub</span
+					>
 				</a>
 			</div>
 		</section>
@@ -54,10 +66,18 @@ import SquareGitHub from "@components/icons/SquareGitHub.astro";
 					src="/images/logos/aws-icon.svg"
 					alt="Amazon Web Services"
 				/>
-				<ListItem title="Bought our first house" subtitle="Me and my wife bought our first house" date="Aug 2022">
+				<ListItem
+					title="Bought our first house"
+					subtitle="Me and my wife bought our first house"
+					date="Aug 2022"
+				>
 					<Home />
 				</ListItem>
-				<ListItem title="Got married" subtitle="Me and my fiancee got married in downtown Des Moines" date="Aug 2022">
+				<ListItem
+					title="Got married"
+					subtitle="Me and my fiancee got married in downtown Des Moines"
+					date="Aug 2022"
+				>
 					<Cake />
 				</ListItem>
 				<ListItem
@@ -81,7 +101,11 @@ import SquareGitHub from "@components/icons/SquareGitHub.astro";
 				>
 					<AcademicCap />
 				</ListItem>
-				<ListItem title="Got engaged" subtitle="Asked my girlfriend to marry me at the ISU Campanile" date="Apr 2021">
+				<ListItem
+					title="Got engaged"
+					subtitle="Asked my girlfriend to marry me at the ISU Campanile"
+					date="Apr 2021"
+				>
 					<Cake />
 				</ListItem>
 				<ListItem
