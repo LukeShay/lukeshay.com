@@ -2,9 +2,8 @@
 
 set -euo pipefail
 
-curl -fsSL https://bun.sh/install | bash
-export PATH="/opt/buildhome/.bun/bin:$PATH"
+npm i -g pnpm
 
-bun --version
-bun install
-bun run build
+pnpm --version
+pnpm install
+pnpm run build
