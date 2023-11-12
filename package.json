@@ -12,23 +12,23 @@
 		"format": "prettier --check --write . src/**/*.astro"
 	},
 	"dependencies": {
-		"@fontsource/inter": "^5.0.8",
+		"@fontsource/inter": "^5.0.15",
 		"@fortawesome/fontawesome-free": "^6.4.2",
-		"astro": "^3.1.4",
+		"astro": "^3.5.3",
 		"cache-parser": "^1.2.4",
-		"prettier-plugin-astro": "^0.12.0",
-		"tailwind-merge": "^1.14.0"
+		"prettier-plugin-astro": "^0.12.1",
+		"tailwind-merge": "^2.0.0"
 	},
 	"devDependencies": {
-		"@astrojs/cloudflare": "^7.3.0",
-		"@astrojs/netlify": "^3.0.2",
-		"@astrojs/tailwind": "^5.0.0",
+		"@astrojs/cloudflare": "^7.6.4",
+		"@astrojs/netlify": "^3.0.4",
+		"@astrojs/tailwind": "^5.0.2",
 		"@lshay/prettier-config": "^0.6.1",
-		"@tailwindcss/forms": "^0.5.6",
+		"@tailwindcss/forms": "^0.5.7",
 		"prettier": "^3.0.3",
-		"prettier-plugin-packagejson": "^2.4.5",
-		"prettier-plugin-tailwindcss": "^0.5.4",
-		"tailwindcss": "^3.3.3"
+		"prettier-plugin-packagejson": "^2.4.6",
+		"prettier-plugin-tailwindcss": "^0.5.7",
+		"tailwindcss": "^3.3.5"
 	},
 	"engines": {
 		"node": "18.x"
