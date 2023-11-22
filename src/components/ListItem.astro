@@ -37,7 +37,7 @@ const Wrapper = href ? "a" : Fragment
 		}
 		{
 			Astro.slots.has("default") && (
-				<div class="pr-4 text-slate-900 dark:text-slate-100 group-hover:text-cyan-400">
+				<div class="pr-4 text-slate-900 dark:text-slate-100 group-hover:text-sky-400">
 					<slot />
 				</div>
 			)
@@ -46,11 +46,11 @@ const Wrapper = href ? "a" : Fragment
 			class="flex justify-between w-full items-center border-b border-slate-200 dark:border-slate-800 py-5"
 		>
 			<div>
-				<h3 class="dark:text-slate-100 group-hover:text-cyan-400">
+				<h3 class="dark:text-slate-100 group-hover:text-sky-400">
 					{title}
 				</h3>
 				<p
-					class="text-sm text-slate-700 dark:text-slate-400 group-hover:text-cyan-400"
+					class="text-sm text-slate-700 dark:text-slate-400 group-hover:text-sky-400"
 				>
 					{subtitle}
 				</p>

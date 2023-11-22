@@ -7,13 +7,18 @@ import Home from "@components/icons/Home.astro"
 import AcademicCap from "@components/icons/AcademicCap.astro"
 import Cake from "@components/icons/Cake.astro"
 import Hero from "@components/Hero.astro"
+import Section from "@components/Section.astro"
 import LinkedIn from "@components/icons/LinkedIn.astro"
 import SquareGitHub from "@components/icons/SquareGitHub.astro"
+import { getPinnedRepositories } from "@server/repositories/github-repository.js"
+import SectionHeader from "@components/SectionHeader.astro"
+
+const projects = await getPinnedRepositories()
 ---
 
 <Layout title="Luke Shay">
 	<main>
-		<section title="Information" class="mb-12 dark:text-slate-100">
+		<Section title="Information">
 			<div class="md:float-right">
 				<Gravatar
 					class="md:w-32 md:h-auto w-24 h-auto mb-6 md:mb-0 rounded-full ring-1 ring-slate-800/5 shadow-lg shadow-slate-800/5"
@@ -34,30 +39,52 @@ import SquareGitHub from "@components/icons/SquareGitHub.astro"
 					</a>
 				</div>
 			</Hero>
-			<div class="flex pt-8 text-sm text-slate-900 dark:text-slate-100">
+			<div
+				class="flex pt-8 text-sm text-slate-900 dark:text-slate-100 space-x-8"
+			>
 				<a
-					class="flex items-center font-semibold"
+					class="flex items-center font-semibold group"
+					rel="noreferrer"
+					target="_blank"
+					href="https://github.com/lukeshay"
+				>
+					<SquareGitHub class="w-8 h-8 pr-2" />
+					<span
+						class="text-slate-700 dark:text-slate-400 group-hover:text-sky-500 dark:group-hover:text-sky-500"
+					>
+						GitHub
+					</span>
+				</a>
+				<a
+					class="flex items-center font-semibold group"
 					rel="noreferrer"
 					target="_blank"
 					href="https://www.linkedin.com/in/luke-shay/"
 				>
 					<LinkedIn class="w-8 h-8 pr-2" /><span
-						class="text-slate-700 dark:text-slate-400">LinkedIn</span
+						class="text-slate-700 dark:text-slate-400 group-hover:text-sky-500 dark:group-hover:text-sky-500"
 					>
-				</a>
-				<a
-					class="flex items-center font-semibold pl-8"
-					rel="noreferrer"
-					target="_blank"
-					href="https://github.com/lukeshay"
-				>
-					<SquareGitHub class="w-8 h-8 pr-2" /><span
-						class="text-slate-700 dark:text-slate-400">GitHub</span
-					>
+						LinkedIn
+					</span>
 				</a>
 			</div>
-		</section>
-		<section title="Life events">
+		</Section>
+		<Section title="Projects">
+			<SectionHeader>My Projects</SectionHeader>
+			<List>
+				{
+					projects.map(({ description, nameWithOwner }) => (
+						<ListItem
+							title={nameWithOwner}
+							subtitle={description}
+							href={`https://github.com/${nameWithOwner}`}
+						/>
+					))
+				}
+			</List>
+		</Section>
+		<Section title="Life events" noBorder>
+			<SectionHeader>My Life Events</SectionHeader>
 			<List>
 				<ListItem
 					title="Started a new job at Amazon Web Services"
@@ -144,6 +171,6 @@ import SquareGitHub from "@components/icons/SquareGitHub.astro"
 					alt="Iowa State University"
 				/>
 			</List>
-		</section>
+		</Section>
 	</main>
 </Layout>

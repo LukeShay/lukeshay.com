@@ -1,0 +1,18 @@
+---
+export interface Props {
+	title?: string
+	class?: string
+	noBorder?: boolean
+}
+---
+
+<section
+	title={Astro.props.title}
+	class={`${Astro.props.class} dark:text-slate-100 border-b-2 border-slate-300 dark:border-slate-700 py-12`}
+	class:list={{
+		"border-none": Astro.props.noBorder,
+		[`${Astro.props.class} dark:text-slate-100 border-b-2 border-slate-300 dark:border-slate-700 py-12`]: true,
+	}}
+>
+	<slot />
+</section>
