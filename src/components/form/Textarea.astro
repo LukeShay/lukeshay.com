@@ -2,16 +2,11 @@
 import ExclamationCircle from "@components/icons/ExclamationCircle.astro"
 import { clsx } from "@utils/cn"
 
-export type ExcludedProps =
-	| "name"
-	| "class"
-	| "aria-describedby"
-	| "aria-invalid"
+// prettier-ignore
+export type ExcludedProps = "name" | "class" | "aria-describedby" | "aria-invalid"
 
-export type Props = Omit<
-	astroHTML.JSX.TextareaHTMLAttributes,
-	ExcludedProps
-> & {
+// prettier-ignore
+export type Props = Omit<astroHTML.JSX.TextareaHTMLAttributes, ExcludedProps> & {
 	name: string
 	label: string
 	helpText?: string
