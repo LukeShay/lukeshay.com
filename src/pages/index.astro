@@ -1,6 +1,7 @@
 ---
 import Layout from "@layouts/Layout.astro"
 import Gravatar from "@components/Gravatar.astro"
+import Toast from "@components/Toast.astro"
 import List from "@components/List.astro"
 import ListItem from "@components/ListItem.astro"
 import Home from "@components/icons/Home.astro"
@@ -10,10 +11,16 @@ import Hero from "@components/Hero.astro"
 import Section from "@components/Section.astro"
 import LinkedIn from "@components/icons/LinkedIn.astro"
 import SquareGitHub from "@components/icons/SquareGitHub.astro"
-import { getPinnedRepositories } from "@server/repositories/github-repository.js"
+import { PinnedRepository, getPinnedRepositories } from "@server/repositories/github-repository.js"
 import SectionHeader from "@components/SectionHeader.astro"
 
-const projects = await getPinnedRepositories()
+let projects: PinnedRepository[] = []
+
+try {
+  projects = await getPinnedRepositories()
+} catch {}
+
+const message = Astro.url.searchParams.get("message")
 ---
 
 <Layout title="Luke Shay">
@@ -26,16 +33,16 @@ const projects = await getPinnedRepositories()
 			</div>
 			<Hero
 				title="Luke Shay"
-				description="Building a project management application for AWS Solution Architects."
+				description="Building a fullstack application for managing product advertisement in stores."
 			>
 				<div slot="subtitle">
-					Software Development Engineer at <a
+					Software Engineer III at <a
 						class="font-bold underline"
 						rel="noreferrer"
 						target="_blank"
-						href="https://aws.amazon.com/"
+						href="https://advantagesolutions.net/"
 					>
-						Amazon Web Services
+						Advantage Solutions
 					</a>
 				</div>
 			</Hero>
@@ -69,23 +76,32 @@ const projects = await getPinnedRepositories()
 				</a>
 			</div>
 		</Section>
-		<Section title="Projects">
-			<SectionHeader>My Projects</SectionHeader>
-			<List>
-				{
-					projects.map(({ description, nameWithOwner }) => (
-						<ListItem
-							title={nameWithOwner}
-							subtitle={description}
-							href={`https://github.com/${nameWithOwner}`}
-						/>
-					))
-				}
-			</List>
-		</Section>
+    {projects.length && (
+      <Section title="Projects">
+        <SectionHeader>My Projects</SectionHeader>
+        <List>
+          {
+            projects.map(({ description, nameWithOwner }) => (
+              <ListItem
+                title={nameWithOwner}
+                subtitle={description}
+                href={`https://github.com/${nameWithOwner}`}
+              />
+            ))
+          }
+        </List>
+      </Section>
+    )}
 		<Section title="Life events" noBorder>
 			<SectionHeader>My Life Events</SectionHeader>
 			<List>
+				<ListItem
+					title="Started a new job at Advantage Solutions"
+					subtitle="Software Engineer III doing fullstack development"
+					date="Feb 2024"
+					src="/images/logos/advantage-solutions.svg"
+					alt="Advantage Solutions"
+				/>
 				<ListItem
 					title="Started a new job at Amazon Web Services"
 					subtitle="Software Development Engineer doing fullstack development"
@@ -174,3 +190,5 @@ const projects = await getPinnedRepositories()
 		</Section>
 	</main>
 </Layout>
+
+{message && message !== "" && <Toast label={message} />}
