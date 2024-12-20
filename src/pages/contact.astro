@@ -1,48 +1,107 @@
 ---
 import Input from "@components/form/Input.astro"
 import Textarea from "@components/form/Textarea.astro"
+import Gravatar from "@components/Gravatar.astro"
 import Hero from "@components/Hero.astro"
+import LinkedIn from "@components/icons/LinkedIn.astro"
+import SquareGitHub from "@components/icons/SquareGitHub.astro"
+import Section from "@components/Section.astro"
 import Layout from "@layouts/Layout.astro"
 ---
 
 <Layout title="Luke Shay | Contact">
 	<main>
-		<section title="Information" class="mb-12 dark:text-slate-100">
+		<Section title="Information">
+			<div class="md:float-right">
+				<Gravatar
+					class="md:w-32 md:h-auto w-24 h-auto mb-6 md:mb-0 rounded-full ring-1 ring-slate-800/5 shadow-lg shadow-slate-800/5"
+				/>
+			</div>
+			<Hero title="Luke Shay" description="Building event management software.">
+				<div slot="subtitle">
+					Software Engineer III at <a
+						class="font-bold underline"
+						rel="noreferrer"
+						target="_blank"
+						href="https://youradv.com/"
+					>
+						Advantage Solutions
+					</a>
+				</div>
+			</Hero>
+			<div
+				class="flex pt-8 text-sm text-slate-900 dark:text-slate-100 space-x-8"
+			>
+				<a
+					class="flex items-center font-semibold group"
+					rel="noreferrer"
+					target="_blank"
+					href="https://github.com/lukeshay"
+				>
+					<SquareGitHub class="w-8 h-8 pr-2 group-hover:text-sky-500" />
+					<span
+						class="text-slate-700 dark:text-slate-400 group-hover:text-sky-500"
+					>
+						GitHub
+					</span>
+				</a>
+				<a
+					class="flex items-center font-semibold group"
+					rel="noreferrer"
+					target="_blank"
+					href="https://www.linkedin.com/in/luke-shay/"
+				>
+					<LinkedIn class="w-8 h-8 pr-2 group-hover:text-sky-500" />
+					<span
+						class="text-slate-700 dark:text-slate-400 group-hover:text-sky-500"
+					>
+						LinkedIn
+					</span>
+				</a>
+			</div>
+		</Section>
+		<Section title="Information" class="mb-12 border-b-0">
 			<Hero
 				title="Contact"
 				subtitle="Enter your information and I will get back to you."
 			/>
-		</section>
-		<form class="space-y-4" name="contact" method="post" action="/success">
-			<input type="hidden" name="form-name" value="contact" />
-			<p class="hidden">
-				<label>
-					Don't fill this out if you're human: <input name="bot-field" />
-				</label>
-			</p>
-			<Input label="Name" name="full-name" required type="text" />
-			<Input
-				label="Email"
-				name="email"
-				required
-				type="email"
-				placeholder="email@placeholder.com"
-			/>
-			<Input
-				label="Linkedin"
-				name="linkedin"
-				required
-				type="url"
-				placeholder="https://www.linkedin.com/in/luke-shay/"
-			/>
-			<Textarea label="Reason" name="reason" required rows={4} />
-			<div data-netlify-recaptcha="true"></div>
-			<button
-				type="submit"
-				class="block rounded-lg shadow-lg border border-sky-600 dark:border-sky-400 dark:shadow-slate-900 dark:bg-slate-900 shadow-slate-800/5 text-sky-600 dark:text-sky-400 sm:text-sm outline-none py-3 px-4 hover:bg-slate-100 dark:hover:bg-slate-800 w-36 mx-auto"
-			>
-				Submit
-			</button>
-		</form>
+			<form class="space-y-4" name="contact" method="post" action="/success">
+				<input type="hidden" name="form-name" value="contact" />
+				<p class="hidden">
+					<label>
+						Don't fill this out if you're human: <input name="bot-field" />
+					</label>
+				</p>
+				<Input
+					label="Name"
+					name="full-name"
+					required
+					type="text"
+					placeholder="Luke Shay"
+				/>
+				<Input
+					label="Email"
+					name="email"
+					required
+					type="email"
+					placeholder="email@placeholder.com"
+				/>
+				<Input
+					label="Linkedin"
+					name="linkedin"
+					required
+					type="url"
+					placeholder="https://www.linkedin.com/in/luke-shay/"
+				/>
+				<Textarea label="Reason" name="reason" required rows={4} />
+				<div data-netlify-recaptcha="true"></div>
+				<button
+					type="submit"
+					class="block border border-sky-600 dark:border-sky-400 text-sky-600 dark:text-sky-400 sm:text-sm outline-none py-3 px-4 hover:bg-slate-100 dark:hover:bg-slate-800 w-36 mx-auto"
+				>
+					Submit
+				</button>
+			</form>
+		</Section>
 	</main>
 </Layout>
