@@ -1,0 +1,53 @@
+---
+import Gravatar from "./Gravatar.astro"
+import Hero from "./Hero.astro"
+import LinkedIn from "./icons/LinkedIn.astro"
+import SquareGitHub from "./icons/SquareGitHub.astro"
+import Section from "./Section.astro"
+---
+
+<Section title="Information">
+	<div class="md:float-right">
+		<Gravatar
+			class="md:w-32 md:h-auto w-24 h-auto mb-6 md:mb-0 rounded-full ring-1 ring-slate-800/5 shadow-lg shadow-slate-800/5"
+		/>
+	</div>
+	<Hero title="Luke Shay" description="Building event management software.">
+		<div slot="subtitle">
+			Software Engineer III at <a
+				class="font-bold underline"
+				rel="noreferrer"
+				target="_blank"
+				href="https://youradv.com/"
+			>
+				Advantage Solutions
+			</a>
+		</div>
+	</Hero>
+</Section>
+<Section title="Links">
+	<div class="flex text-sm text-slate-900 dark:text-slate-100 space-x-8">
+		<a
+			class="flex items-center font-semibold group"
+			rel="noreferrer"
+			target="_blank"
+			href="https://github.com/lukeshay"
+		>
+			<SquareGitHub class="w-8 h-8 pr-2 group-hover:text-sky-500" />
+			<span class="text-slate-700 dark:text-slate-400 group-hover:text-sky-500">
+				GitHub
+			</span>
+		</a>
+		<a
+			class="flex items-center font-semibold group"
+			rel="noreferrer"
+			target="_blank"
+			href="https://www.linkedin.com/in/luke-shay/"
+		>
+			<LinkedIn class="w-8 h-8 pr-2 group-hover:text-sky-500" />
+			<span class="text-slate-700 dark:text-slate-400 group-hover:text-sky-500">
+				LinkedIn
+			</span>
+		</a>
+	</div>
+</Section>

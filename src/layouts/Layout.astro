@@ -1,31 +1,31 @@
 ---
-import ibmPlexMonoLatin100Normal from "@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-100-normal.woff2"
-import ibmPlexMonoLatin200Normal from "@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-200-normal.woff2"
-import ibmPlexMonoLatin300Normal from "@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-300-normal.woff2"
-import ibmPlexMonoLatin400Normal from "@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-400-normal.woff2"
-import ibmPlexMonoLatin500Normal from "@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-500-normal.woff2"
-import ibmPlexMonoLatin600Normal from "@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-600-normal.woff2"
-import ibmPlexMonoLatin700Normal from "@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-700-normal.woff2"
+import ibmPlexMonoLatin100Normal from "@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-100-normal.woff2";
+import ibmPlexMonoLatin200Normal from "@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-200-normal.woff2";
+import ibmPlexMonoLatin300Normal from "@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-300-normal.woff2";
+import ibmPlexMonoLatin400Normal from "@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-400-normal.woff2";
+import ibmPlexMonoLatin500Normal from "@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-500-normal.woff2";
+import ibmPlexMonoLatin600Normal from "@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-600-normal.woff2";
+import ibmPlexMonoLatin700Normal from "@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-700-normal.woff2";
 
-import ibmPlexMonoLatin100Italic from "@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-100-italic.woff2"
-import ibmPlexMonoLatin200Italic from "@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-200-italic.woff2"
-import ibmPlexMonoLatin300Italic from "@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-300-italic.woff2"
-import ibmPlexMonoLatin400Italic from "@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-400-italic.woff2"
-import ibmPlexMonoLatin500Italic from "@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-500-italic.woff2"
-import ibmPlexMonoLatin600Italic from "@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-600-italic.woff2"
-import ibmPlexMonoLatin700Italic from "@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-700-italic.woff2"
+import ibmPlexMonoLatin100Italic from "@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-100-italic.woff2";
+import ibmPlexMonoLatin200Italic from "@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-200-italic.woff2";
+import ibmPlexMonoLatin300Italic from "@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-300-italic.woff2";
+import ibmPlexMonoLatin400Italic from "@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-400-italic.woff2";
+import ibmPlexMonoLatin500Italic from "@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-500-italic.woff2";
+import ibmPlexMonoLatin600Italic from "@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-600-italic.woff2";
+import ibmPlexMonoLatin700Italic from "@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-700-italic.woff2";
 
-import "@fontsource/ibm-plex-mono/index.css"
+import "@fontsource/ibm-plex-mono/index.css";
 
-import Navbar from "@components/Navbar.astro"
-import ThemeToggle from "@components/ThemeToggle.astro"
-import { setCacheControl } from "@server/utils/response-util.js"
+import Navbar from "@components/Navbar.astro";
+import ThemeToggle from "@components/ThemeToggle.astro";
+import { setCacheControl } from "@server/utils/response-util.js";
 
 export interface Props {
-	title: string
+	title: string;
 }
 
-const { title } = Astro.props
+const { title } = Astro.props;
 
 setCacheControl(Astro, {
 	maxAge: 604800,
@@ -35,7 +35,7 @@ setCacheControl(Astro, {
 	sMaxAge: 604800,
 	staleIfError: 86400,
 	staleWhileRevalidate: 86400,
-})
+});
 
 const fonts = [
 	ibmPlexMonoLatin100Normal,
@@ -53,7 +53,7 @@ const fonts = [
 	ibmPlexMonoLatin500Italic,
 	ibmPlexMonoLatin600Italic,
 	ibmPlexMonoLatin700Italic,
-]
+];
 ---
 
 <!doctype html>
@@ -97,6 +97,7 @@ const fonts = [
 			content="Luke Shay, Software, Software Engineer, Development, JavaScript, TypeScript, Deno, Bun, AWS, Amazon Web Services, GCP, Google Cloud Platform"
 		/>
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="sitemap" href="/sitemap-index.xml" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -122,8 +123,8 @@ const fonts = [
 
 <script>
 	if (localStorage.getItem("theme") === "dark") {
-		document.body.classList.add("dark")
+		document.body.classList.add("dark");
 	} else {
-		document.body.classList.add("remove")
+		document.body.classList.add("remove");
 	}
 </script>

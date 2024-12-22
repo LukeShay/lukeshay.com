@@ -32,7 +32,7 @@ const config = {
 	rangeEnd: Number.POSITIVE_INFINITY,
 	rangeStart: 0,
 	requirePragma: false,
-	semi: false,
+	semi: true,
 	singleAttributePerLine: false,
 	singleQuote: false,
 	tabWidth: 2,
