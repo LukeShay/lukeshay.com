@@ -1,7 +1,7 @@
-const defaultTheme = require("tailwindcss/defaultTheme")
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
 	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
 	darkMode: "class",
 	theme: {
@@ -12,4 +12,4 @@ module.exports = {
 		},
 	},
 	plugins: [require("@tailwindcss/forms")],
-}
+};

@@ -1,4 +1,4 @@
-const config = {
+export default {
 	arrowParens: "always",
 	bracketSameLine: false,
 	bracketSpacing: true,
@@ -41,4 +41,3 @@ const config = {
 	vueIndentScriptAndStyle: false,
 }
 
-module.exports = config
